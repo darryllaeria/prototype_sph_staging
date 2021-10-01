@@ -3,17 +3,17 @@ package com.proto.type.base.base_component
 import android.content.Context
 import android.content.res.Configuration
 import android.os.Bundle
-import android.os.Messenger
 import androidx.appcompat.app.AppCompatActivity
+import com.novoda.merlin.Merlin
 import com.proto.type.base.R
 import com.proto.type.base.extension.applyLocale
 import com.proto.type.base.extension.hasInternetConnection
-import com.novoda.merlin.Merlin
 import com.tapadoo.alerter.Alerter
 
 abstract class BaseActivity : AppCompatActivity() {
 
     abstract var layoutId: Int
+
     private val merlin by lazy {
         Merlin.Builder()
             .withConnectableCallbacks()

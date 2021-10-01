@@ -22,7 +22,7 @@ abstract class BaseFragment : Fragment() {
     abstract var layoutId: Int
 
     private val loader: AppProgressDialog by lazy {
-        AppProgressDialog(context!!)
+        AppProgressDialog(requireContext())
     }
 
     // MARK: - Override Functions
@@ -165,9 +165,7 @@ abstract class BaseFragment : Fragment() {
     /**
      * @method Init all views for fragment
      */
-    open fun initView() {
-//        sharedElementEnterTransition = TransitionInflater.from(context).inflateTransition(android.R.transition.move)
-    }
+    open fun initView() {}
 
     /**
      * @method Unsubscribe all observers from view model's live data attributes
