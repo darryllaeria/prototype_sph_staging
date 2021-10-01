@@ -48,15 +48,15 @@ class SignUpNameFragment : BaseFragment() {
     override fun initLogic() {
         super.initLogic()
         viewModel.loadSaveForm()
-        viewModel.signUpForm.observe(this, Observer {
-            etFirstName.setText(it.firstName)
-            etLastName.setText(it.lastName)
-        })
+//        viewModel.signUpForm.observe(this, Observer {
+//            etFirstName.setText(it.firstName)
+//            etLastName.setText(it.lastName)
+//        })
     }
 
     override fun unsubscribeObservers() {
         super.unsubscribeObservers()
-        viewModel.signUpForm.removeObservers(this)
+//        viewModel.signUpForm.removeObservers(this)
     }
 
     private val textWatcher = object : TextWatcher {

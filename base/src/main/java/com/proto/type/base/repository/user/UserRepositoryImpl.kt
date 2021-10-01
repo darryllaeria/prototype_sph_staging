@@ -3,22 +3,23 @@ package com.proto.type.base.repository.user
 import android.content.Context
 import android.net.Uri
 import android.os.Build
-import com.proto.type.base.*
+import com.proto.type.base.BuildConfig
+import com.proto.type.base.Constants
 import com.proto.type.base.Constants.ErrorString.ERROR_NONE
 import com.proto.type.base.Constants.ErrorString.ERROR_SERVER_ISSUE
 import com.proto.type.base.Constants.ErrorString.ERROR_UNABLE_SAVE_LOCAL
 import com.proto.type.base.Constants.ErrorString.ERROR_USERNAME_NOT_EXIST
+import com.proto.type.base.JSONMutableMap
+import com.proto.type.base.SuccessCallback
 import com.proto.type.base.data.database.RealmDB
 import com.proto.type.base.data.database.dao.UserDao
 import com.proto.type.base.data.database.entity.UserEntityKey
 import com.proto.type.base.data.mapper.UserMapper
 import com.proto.type.base.data.model.*
 import com.proto.type.base.data.remote.UserService
-import com.proto.type.base.extension.getAllLocalContacts
-import com.proto.type.base.extension.getDeviceID
 import com.proto.type.base.manager.PrefsManager
 import com.proto.type.base.utils.AppLog
-import kotlinx.coroutines.*
+import kotlinx.coroutines.runBlocking
 import org.json.JSONArray
 import org.json.JSONObject
 
@@ -142,11 +143,6 @@ class UserRepositoryImpl(
     override suspend fun updateLocalUserPhone(number: String): UserModel {
         // TODO("Implement update phone number feature")
         return UserModel.generateLocalUser()
-    }
-
-    // MARK: - Context Function
-    override fun loadPhoneContacts(): List<ContactModel> {
-        return context.getAllLocalContacts()
     }
 
     // MARK: - Firebase Functions
@@ -297,16 +293,6 @@ class UserRepositoryImpl(
 
     override suspend fun report(targetId: String, targetType: String, reasonType: String, reasonContent: String): Boolean {
         return userService.report(UserReportRequest(reasonContent, reasonType, targetType, targetId)).isSuccessful
-    }
-
-    override suspend fun syncContacts(contacts: List<ContactModel>): Boolean {
-        return try {
-            val jsonString = userService.syncContacts(ContactsRequest(contacts, context.getDeviceID())).string().trim()
-            val jsonArray = JSONArray(jsonString)
-            saveUserJsons(jsonArray) // Save users info to Realm
-        } catch (e: Exception) {
-            false
-        }
     }
 
     override suspend fun unblockUser(userId: String): Boolean {

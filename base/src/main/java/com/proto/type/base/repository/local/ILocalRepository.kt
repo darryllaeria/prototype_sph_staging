@@ -1,7 +1,5 @@
 package com.proto.type.base.repository.local
 
-import com.proto.type.base.data.model.SignUpForm
-
 interface ILocalRepository {
 
     /**
@@ -43,11 +41,6 @@ interface ILocalRepository {
      * Store number
      */
     fun storePhoneNumber(number: String)
-
-    /**
-     * Get register information form and then save it
-     */
-    fun getSignupForm(): SignUpForm
 
     /**
      * When finish register process, clear all form

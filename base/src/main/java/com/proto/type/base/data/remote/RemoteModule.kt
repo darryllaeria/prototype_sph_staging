@@ -1,18 +1,15 @@
 package com.proto.type.base.data.remote
 
 import android.content.Context
+import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory
 import com.proto.type.base.BuildConfig
 import com.proto.type.base.Constants
-import com.proto.type.base.NoNetworkException
-import com.proto.type.base.manager.PrefsManager
 import com.proto.type.base.data.model.AvatarModel
 import com.proto.type.base.data.model.ChatModel
-import com.proto.type.base.data.model.MessageData
 import com.proto.type.base.data.parser.AvatarParser
 import com.proto.type.base.data.parser.ChatParser
-import com.proto.type.base.data.parser.MessageDataParser
 import com.proto.type.base.extension.hasInternetConnection
-import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory
+import com.proto.type.base.manager.PrefsManager
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import kotlinx.coroutines.CoroutineScope
@@ -26,6 +23,7 @@ import org.koin.core.qualifier.named
 import org.koin.dsl.module
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
+import java.io.IOException
 import java.security.SecureRandom
 import java.security.cert.X509Certificate
 import java.util.concurrent.TimeUnit
@@ -41,9 +39,7 @@ val remoteModule = module {
     single { provideUnsafeClient(get(), get(named("state")), get(named("auth"))) }
     single { provideRetrofit(get()) }
     factory { provideUserService(get()) }
-    factory { provideDeviceService(get()) }
     factory { provideChatRoomService(get()) }
-    single { provideMessageService(get()) }
 }
 
 
@@ -59,7 +55,7 @@ fun provideNetworkCheckInterceptor(context: Context): Interceptor {
             if (context.hasInternetConnection()) {
                 return chain.proceed(chain.request())
             }
-            throw NoNetworkException()
+            throw IOException()
         }
     }
 }
@@ -139,7 +135,6 @@ fun provideUnsafeClient(
 fun provideRetrofit(client: OkHttpClient): Retrofit {
     val moshi = Moshi.Builder()
         .add(AvatarModel::class.java, AvatarParser())
-        .add(MessageData::class.java, MessageDataParser())
         .add(ChatModel::class.java, ChatParser())
         .add(KotlinJsonAdapterFactory())
         .build()
@@ -157,12 +152,4 @@ fun provideUserService(retrofit: Retrofit): UserService {
 
 fun provideChatRoomService(retrofit: Retrofit): ChatService {
     return retrofit.create(ChatService::class.java)
-}
-
-fun provideMessageService(retrofit: Retrofit): MessageService {
-    return retrofit.create(MessageService::class.java)
-}
-
-fun provideDeviceService(retrofit: Retrofit): DeviceService {
-    return retrofit.create(DeviceService::class.java)
 }

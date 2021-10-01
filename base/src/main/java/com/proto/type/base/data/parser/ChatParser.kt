@@ -1,6 +1,5 @@
 package com.proto.type.base.data.parser
 
-import com.proto.type.base.data.database.dao.MessageDataType
 import com.proto.type.base.data.model.ChatModel
 import com.proto.type.base.data.model.ChatJsonKey
 import com.proto.type.base.utils.AppLog
@@ -148,7 +147,7 @@ class ChatParser: JsonAdapter<ChatModel?>() {
                                             while (reader.hasNext()) {
                                                 when (reader.nextName()) {
                                                     ChatJsonKey.type -> {
-                                                        chatModel.last_message?.data?.type = MessageDataType.valueOf(reader.nextString())
+//                                                        chatModel.last_message?.data?.type = MessageDataType.valueOf(reader.nextString())
                                                     }
                                                     ChatJsonKey.value -> {
                                                         if (reader.peek() != JsonReader.Token.NULL) {
@@ -157,16 +156,16 @@ class ChatParser: JsonAdapter<ChatModel?>() {
                                                                 while (reader.hasNext()) {
                                                                     when (reader.nextName()) {
                                                                         ChatJsonKey.id -> {
-                                                                            chatModel.last_message?.data?.value = reader.nextString()
+//                                                                            chatModel.last_message?.data?.value = reader.nextString()
                                                                         }
                                                                         ChatJsonKey.url -> {
-                                                                            chatModel.last_message?.data?.value_url = reader.nextString()
+//                                                                            chatModel.last_message?.data?.value_url = reader.nextString()
                                                                         }
                                                                     }
                                                                 }
                                                                 reader.endObject()
                                                             } else {
-                                                                chatModel.last_message?.data?.value = reader.nextString()
+//                                                                chatModel.last_message?.data?.value = reader.nextString()
                                                             }
                                                         } else {
                                                             reader.skipValue()
@@ -184,10 +183,10 @@ class ChatParser: JsonAdapter<ChatModel?>() {
                                                     while (reader.hasNext()) {
                                                         when (reader.nextName()) {
                                                             ChatJsonKey.id -> {
-                                                                chatModel.last_message?.sender?.id = reader.nextString()
+//                                                                chatModel.last_message?.sender?.id = reader.nextString()
                                                             }
                                                             ChatJsonKey.type -> {
-                                                                chatModel.last_message?.sender?.type = reader.nextString()
+//                                                                chatModel.last_message?.sender?.type = reader.nextString()
                                                             }
                                                         }
                                                     }
@@ -199,7 +198,7 @@ class ChatParser: JsonAdapter<ChatModel?>() {
                                         }
                                         ChatJsonKey.sent_ts -> {
                                             if (reader.peek() != JsonReader.Token.NULL) {
-                                                chatModel.last_message?.sent_ts = reader.nextDouble()
+//                                                chatModel.last_message?.sent_ts = reader.nextDouble()
                                             } else {
                                                 reader.skipValue()
                                             }

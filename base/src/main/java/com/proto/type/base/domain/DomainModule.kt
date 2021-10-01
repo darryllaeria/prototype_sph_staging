@@ -8,7 +8,4 @@ val domainModule = module {
     single { GetChatParticipants(get(), get()) }
     single { GetChatQUser(get()) }
     single { GetChats(get(), get()) }
-    single { GetLocalContact(get()) }
-    single { GetMessages(get()) }
-    single { SyncContact(get()) }
 }

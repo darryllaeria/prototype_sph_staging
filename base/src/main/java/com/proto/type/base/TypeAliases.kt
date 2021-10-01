@@ -10,4 +10,3 @@ typealias SuccessCallback = (Boolean) -> Unit
 
 // MARK: - Types
 typealias JSONMutableMap = MutableMap<String, Any?>
-typealias MQTTRecipientMutableMap = MutableMap<String, Pair<MutableList<MQTTRecipient>, ByteArray?>>

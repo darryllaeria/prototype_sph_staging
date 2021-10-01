@@ -93,14 +93,14 @@ class SignUpEmailFragment: BaseFragment() {
     override fun initLogic() {
         super.initLogic()
         viewModel.loadSaveForm()
-        viewModel.signUpForm.observe(this, Observer {
-            etEmail.setText(it.email)
-        })
+//        viewModel.signUpForm.observe(this, Observer {
+//            etEmail.setText(it.email)
+//        })
     }
 
     override fun unsubscribeObservers() {
         super.unsubscribeObservers()
-        viewModel.signUpForm.removeObservers(this)
+//        viewModel.signUpForm.removeObservers(this)
         viewModel.isUserExisted.removeObservers(this)
     }
 }

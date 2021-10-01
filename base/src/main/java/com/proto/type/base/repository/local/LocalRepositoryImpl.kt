@@ -2,7 +2,6 @@ package com.proto.type.base.repository.local
 
 import android.content.Context
 import com.proto.type.base.Constants
-import com.proto.type.base.data.model.SignUpForm
 import com.proto.type.base.manager.PrefsManager
 
 class LocalRepositoryImpl(context: Context): ILocalRepository {
@@ -47,17 +46,6 @@ class LocalRepositoryImpl(context: Context): ILocalRepository {
 
     override fun storePhoneNumber(number: String) {
         prefsManager.putString(PrefsManager.KEY_REG_NUMBER, number)
-    }
-
-    override fun getSignupForm(): SignUpForm {
-        return SignUpForm(
-            email = prefsManager.getString(PrefsManager.KEY_REG_EMAIL, ""),
-            password = prefsManager.getString(PrefsManager.KEY_REG_PWD, ""),
-            firstName = prefsManager.getString(PrefsManager.KEY_REG_FIRST_NAME, ""),
-            lastName = prefsManager.getString(PrefsManager.KEY_REG_LAST_NAME, ""),
-            userName = prefsManager.getString(PrefsManager.KEY_REG_USR_NAME, ""),
-            phoneNumber = prefsManager.getString(PrefsManager.KEY_REG_NUMBER, "")
-        )
     }
 
     override fun authorized() {

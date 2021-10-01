@@ -1,6 +1,5 @@
 package com.proto.type.base.data.mapper
 
-import com.proto.type.base.data.database.dao.MessageDao
 import com.proto.type.base.extension.convertToList
 import com.proto.type.base.extension.convertToRealmList
 import com.proto.type.base.data.database.entity.ChatEntity
@@ -8,11 +7,6 @@ import com.proto.type.base.data.model.ChatModel
 import io.realm.RealmList
 
 object ChatMapper {
-
-    // MARK: - Private Constant
-    private val messageDao: MessageDao by lazy {
-        MessageDao()
-    }
 
     // MARK: - Public Functions
     fun toEntities(chatModels: List<ChatModel>): List<ChatEntity> = chatModels.map { toEntity(it) }
@@ -44,7 +38,8 @@ object ChatMapper {
         chatModel.id = chatEntity.id
         chatModel.is_pinned = chatEntity.is_pinned
         chatModel.is_removed = chatEntity.is_removed
-        chatModel.last_message = messageDao.findLatestMessage(chatEntity.id)
+//        chatModel.last_message = messageDao.findLatestMessage(chatEntity.id)
+        chatModel.last_message = ""
         chatModel.mute_notification = chatEntity.mute_notification
         chatModel.name = chatEntity.name
         chatModel.participant_ids = chatEntity.participant_ids.convertToList()

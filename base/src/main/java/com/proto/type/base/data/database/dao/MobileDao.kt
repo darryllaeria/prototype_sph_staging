@@ -3,7 +3,6 @@ package com.proto.type.base.data.database.dao
 import com.proto.type.base.JSONMutableMap
 import com.proto.type.base.data.database.entity.ChatEntity
 import com.proto.type.base.data.database.entity.ChatEntityKey
-import com.proto.type.base.data.database.entity.MessageEntityKey
 import com.proto.type.base.data.mapper.ChatMapper
 import com.proto.type.base.data.model.AvatarJsonKey
 import com.proto.type.base.data.model.ChatJsonKey

@@ -40,9 +40,6 @@ interface IUserRepository {
 
     suspend fun updateLocalUserPhone(number: String): UserModel
 
-    // MARK: - Context Function
-    fun loadPhoneContacts(): List<ContactModel>
-
     // MARK: - Firebase Functions
     fun confirmPasswordReset(code: String, password: String, callback: SuccessCallback)
 
@@ -90,8 +87,6 @@ interface IUserRepository {
     suspend fun registerNewChatQUser(request: UserRegisterRequest): Boolean
 
     suspend fun report(targetId: String, targetType: String, reasonType: String, reasonContent: String = ""): Boolean
-
-    suspend fun syncContacts(contacts: List<ContactModel>): Boolean
 
     suspend fun unblockUser(userId: String): Boolean
 

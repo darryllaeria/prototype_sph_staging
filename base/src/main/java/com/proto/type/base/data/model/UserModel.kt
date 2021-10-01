@@ -2,8 +2,6 @@ package com.proto.type.base.data.model
 
 import android.content.Context
 import com.proto.type.base.Constants.KEY_CHATQ_USER
-import com.proto.type.base.Sender
-import com.proto.type.base.SenderType
 import com.proto.type.base.utils.DateTimeUtils
 import com.squareup.moshi.Json
 import java.util.*
@@ -106,10 +104,10 @@ data class UserRegisterRequest(@Json(name = UserJsonKey.phone_number) val number
                                @Json(name = UserJsonKey.email) val email: String,
                                @Json(name = UserJsonKey.username) val username: String? = null)
 
-data class UserReportRequest(@Json(name = ReportJsonKey.reason_description) val reasonContent: String,
-                             @Json(name = ReportJsonKey.reason_type) val reasonType: String,
-                             @Json(name = ReportJsonKey.target_category) val targetCategory: String,
-                             @Json(name = ReportJsonKey.target_id) val targetId: String)
+data class UserReportRequest(@Json(name = "reason_description") val reasonContent: String,
+                             @Json(name = "reason_type") val reasonType: String,
+                             @Json(name = "target_category") val targetCategory: String,
+                             @Json(name = "target_id") val targetId: String)
 
 data class UserUpdateRequest(@Json(name = UserJsonKey.avatar) val avatar: AvatarModel? = null,
                              @Json(name = UserJsonKey.username) val userName: String? = null,
@@ -118,6 +116,17 @@ data class UserUpdateRequest(@Json(name = UserJsonKey.avatar) val avatar: Avatar
                              @Json(name = UserJsonKey.first_name) val firstName: String? = null,
                              @Json(name = UserJsonKey.display_name) val displayName: String? = null,
                              @Json(name = UserJsonKey.email) val email: String? = null)
+
+interface Sender {
+    val id: String
+    val sender_type: SenderType
+}
+
+enum class SenderType(val type: String) {
+    BotInstance("bot"),
+    System("system"),
+    User("user")
+}
 
 // MARK: - Response Data Class
 data class UserExistResponse(val status: Boolean)

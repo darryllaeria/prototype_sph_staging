@@ -17,13 +17,13 @@ import org.koin.dsl.module
 val homeModule = module {
     viewModel { CreatePasswordViewModel(get(), get()) }
     viewModel { EmailVerifyViewModel(get()) }
-    viewModel { EmailViewModel(get(), get(), get(), get()) }
+    viewModel { EmailViewModel(get(), get()) }
     viewModel { ForgotPasswordViewModel(get()) }
     viewModel { OnBoardViewModel(get()) }
     viewModel { SignUpEmailViewModel(get(), get()) }
-    viewModel { SignUpMobileViewModel(get(), get()) }
+    viewModel { SignUpMobileViewModel(get()) }
     viewModel { SignUpNameViewModel(get()) }
-    viewModel { SplashViewModel(get(), get()) }
-    viewModel { TermOfServiceViewModel(get(), get(), get()) }
+    viewModel { SplashViewModel(get()) }
+    viewModel { TermOfServiceViewModel(get(), get()) }
     viewModel { UsernameViewModel(get(), get(), get()) }
 }

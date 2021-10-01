@@ -4,8 +4,6 @@ import androidx.lifecycle.MutableLiveData
 import com.proto.type.main.R
 import com.proto.type.base.base_component.BaseViewModel
 import com.proto.type.base.base_component.UIState
-import com.proto.type.base.manager.ChatMessagesManager
-import com.proto.type.base.repository.device.IDeviceRepository
 import com.proto.type.base.repository.local.ILocalRepository
 import com.proto.type.base.repository.user.IUserRepository
 import com.proto.type.base.utils.AppLog
@@ -13,8 +11,8 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 
 class EmailViewModel(
-    private val chatMessagesManager: ChatMessagesManager,
-    private val deviceRepo: IDeviceRepository,
+//    private val chatMessagesManager: ChatMessagesManager,
+//    private val deviceRepo: IDeviceRepository,
 //    private val firebaseService: FirebaseService,
     private val localRepo: ILocalRepository,
     private val userRepo: IUserRepository
@@ -44,10 +42,10 @@ class EmailViewModel(
                             loadedUser.is_default_user = true
                             userRepo.saveUserModel(loadedUser)
                             runBlocking {
-                                deviceRepo.registerDevice()
+//                                deviceRepo.registerDevice()
                                 localRepo.authorized()
                                 val userKey = userRepo.loadCurrentUserEncryptionKey()
-                                chatMessagesManager.subscribe(userId, userKey)
+//                                chatMessagesManager.subscribe(userId, userKey)
 //                                firebaseService.checkForMarketDataUpdate()
                             }
                             user.postValue(UIState.FINISHED(loadedUser))

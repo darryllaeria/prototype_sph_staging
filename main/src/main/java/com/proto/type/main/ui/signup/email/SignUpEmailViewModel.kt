@@ -1,7 +1,7 @@
 package com.proto.type.main.ui.signup.email
 
 import androidx.lifecycle.MutableLiveData
-import com.proto.type.base.data.model.SignUpForm
+//import com.proto.type.base.data.model.SignUpForm
 import com.proto.type.base.repository.local.ILocalRepository
 import com.proto.type.base.repository.user.IUserRepository
 import com.proto.type.base.base_component.BaseViewModel
@@ -19,7 +19,7 @@ class SignUpEmailViewModel(private val localRepo: ILocalRepository,
 
     // MARK: - Public Variables
     var isUserExisted = MutableLiveData<UIState>()
-    var signUpForm = MutableLiveData<SignUpForm>()
+//    var signUpForm = MutableLiveData<SignUpForm>()
 
     // MARK: - Public Functions
     fun checkUserEmail(email: String) {
@@ -35,7 +35,7 @@ class SignUpEmailViewModel(private val localRepo: ILocalRepository,
     }
 
     fun loadSaveForm() {
-        signUpForm.postValue(localRepo.getSignupForm())
+//        signUpForm.postValue(localRepo.getSignupForm())
     }
 
     fun storeEmail(email: String) {

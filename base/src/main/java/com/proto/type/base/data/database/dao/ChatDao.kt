@@ -3,7 +3,6 @@ package com.proto.type.base.data.database.dao
 import com.proto.type.base.JSONMutableMap
 import com.proto.type.base.data.database.entity.ChatEntity
 import com.proto.type.base.data.database.entity.ChatEntityKey
-import com.proto.type.base.data.database.entity.MessageEntityKey
 import com.proto.type.base.data.mapper.ChatMapper
 import com.proto.type.base.data.model.AvatarJsonKey
 import com.proto.type.base.data.model.ChatJsonKey
@@ -16,9 +15,9 @@ import org.json.JSONObject
 class ChatDao: BaseDao() {
 
     // MARK: - Private Constant
-    private val messageDao: MessageDao by lazy {
-         MessageDao()
-    }
+//    private val messageDao: MessageDao by lazy {
+//         MessageDao()
+//    }
 
     // MARK: - Public Functions
     fun deleteChat(roomId: String) {
@@ -51,12 +50,13 @@ class ChatDao: BaseDao() {
     }
 
     fun getAllChats(): List<ChatModel> {
-        Realm.getDefaultInstance().use { realm ->
-            return ChatMapper.toModels(
-                realm.where(ChatEntity::class.java)
-                .findAll()
-            ).sortedByDescending { it.last_message?.sent_ts ?: 0.0 }
-        }
+        return emptyList()
+//        Realm.getDefaultInstance().use { realm ->
+//            return ChatMapper.toModels(
+//                realm.where(ChatEntity::class.java)
+//                .findAll()
+//            ).sortedByDescending { it.last_message?.sent_ts ?: 0.0 }
+//        }
     }
 
     fun saveJSONData(rawJSONObject: JSONObject): String? {
@@ -78,8 +78,8 @@ class ChatDao: BaseDao() {
         (rawJSONObject.opt(ChatJsonKey.is_pinned) as? Boolean)?.let { jsonMap[ChatEntityKey.is_pinned] = it }
         jsonMap[ChatEntityKey.is_removed] = false
         (rawJSONObject.opt(ChatJsonKey.last_message) as? JSONObject)?.let {
-            it.put(MessageEntityKey.room_id, id)
-            messageDao.saveJSONData(it)
+//            it.put(MessageEntityKey.room_id, id)
+//            messageDao.saveJSONData(it)
         }
         (rawJSONObject.opt(ChatJsonKey.name) as? String)?.let { jsonMap[ChatEntityKey.name] = it }
         (rawJSONObject.opt(ChatJsonKey.participants) as? JSONArray)?.let {

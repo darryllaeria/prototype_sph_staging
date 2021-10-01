@@ -87,8 +87,8 @@ interface UserService {
     /**
      * Sync local contacts to ChatQ server
      */
-    @PUT("/v1/users/contacts")
-    suspend fun syncContacts(@Body request: ContactsRequest): ResponseBody
+//    @PUT("/v1/users/contacts")
+//    suspend fun syncContacts(@Body request: ContactsRequest): ResponseBody
 
     /**
      * Unblock a user

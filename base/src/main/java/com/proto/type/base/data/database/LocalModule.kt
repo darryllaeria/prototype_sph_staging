@@ -8,9 +8,6 @@ import java.util.concurrent.Executors
 
 val localModule = module {
     single { ChatDao() }
-    single { MessageDao() }
-    single { MessageLinkItemDao() }
-    single { MessageMediaItemDao() }
     single { UserDao() }
 
     single { CoroutineScope(Executors.newSingleThreadExecutor().asCoroutineDispatcher()) }
