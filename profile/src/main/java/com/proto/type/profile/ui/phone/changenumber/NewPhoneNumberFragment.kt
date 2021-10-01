@@ -36,14 +36,14 @@ class NewPhoneNumberFragment: BaseFragment() {
         })
 
         btSave.setOnClickListener {
-            navigateTo(R.id.action_change_phone_to_otp, bundleOf(Constants.KEY_PHONE to countryCodePicker.selectedCountryCodeWithPlus + etMobileNumber.text.toString()))
+//            navigateTo(R.id.action_change_phone_to_otp, bundleOf(Constants.KEY_PHONE to countryCodePicker.selectedCountryCodeWithPlus + etMobileNumber.text.toString()))
         }
     }
 
     override fun initLogic() {
         super.initLogic()
         viewModel.getCountryCode().observe(this, Observer {
-            countryCodePicker.setCountryForNameCode(it)
+//            countryCodePicker.setCountryForNameCode(it)
         })
     }
 }

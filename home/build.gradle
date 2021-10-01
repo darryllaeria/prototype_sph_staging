@@ -50,7 +50,6 @@ dependencies {
     implementation library.lottie
 
     implementation project(":base")
-    implementation project(":ccp")
 
     testImplementation test.junit
     androidTestImplementation test.junit_ext

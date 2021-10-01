@@ -29,7 +29,7 @@ class SignUpMobileFragment : BaseFragment() {
 
         btContinue.apply {
             setOnClickListener {
-                viewModel.storePhoneNumber(countryCodePicker.selectedCountryCodeWithPlus + etMobileNumber.text.toString())
+//                viewModel.storePhoneNumber(countryCodePicker.selectedCountryCodeWithPlus + etMobileNumber.text.toString())
                 navigateTo(R.id.action_signup_mobile_to_chatq_id)
             }
             isEnabled = etMobileNumber.text.toString().isNotEmpty()
@@ -39,7 +39,7 @@ class SignUpMobileFragment : BaseFragment() {
         }
 
         tvChangeCountryCode.setOnClickListener {
-            countryCodePicker.performClick()
+//            countryCodePicker.performClick()
         }
     }
 
@@ -47,7 +47,7 @@ class SignUpMobileFragment : BaseFragment() {
         super.initLogic()
         viewModel.getCountryCode()
         viewModel.countryCode.observe(this, Observer {
-            countryCodePicker.setCountryForNameCode(it)
+//            countryCodePicker.setCountryForNameCode(it)
         })
     }
 

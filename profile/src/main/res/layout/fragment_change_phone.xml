@@ -42,34 +42,33 @@
         app:layout_constraintStart_toStartOf="@+id/glStart"
         app:layout_constraintTop_toBottomOf="@+id/textViewHeading" />
 
-    <com.hbb20.CountryCodePicker
-        android:id="@+id/countryCodePicker"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/medium_margin"
-        android:layout_marginTop="@dimen/medium_margin"
-        app:countryPreference="JP,SG,VN"
-        app:hideNameCode="true"
-        app:keyboardAutoPopOnSearch="false"
-        app:layout_constraintStart_toEndOf="@id/glStart"
-        app:layout_constraintTop_toBottomOf="@+id/textViewMessage" />
+<!--    <com.hbb20.CountryCodePicker-->
+<!--        android:id="@+id/countryCodePicker"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="@dimen/medium_margin"-->
+<!--        android:layout_marginTop="@dimen/medium_margin"-->
+<!--        app:countryPreference="JP,SG,VN"-->
+<!--        app:hideNameCode="true"-->
+<!--        app:keyboardAutoPopOnSearch="false"-->
+<!--        app:layout_constraintStart_toEndOf="@id/glStart"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/textViewMessage" />-->
 
     <EditText
         android:id="@+id/etMobileNumber"
         style="@style/SignUpEditText"
-        android:gravity="start"
         android:layout_width="@dimen/match_constraints"
         android:layout_height="wrap_content"
+        android:gravity="start"
         android:hint="@string/phone_number"
         android:importantForAutofill="no"
         android:inputType="phone"
+        android:maxLength="10"
         android:paddingTop="@dimen/common_margin"
         android:paddingBottom="@dimen/common_margin"
-        android:maxLength="10"
-        app:layout_constraintBottom_toBottomOf="@id/countryCodePicker"
-        app:layout_constraintEnd_toEndOf="@id/glEnd"
-        app:layout_constraintStart_toEndOf="@id/countryCodePicker"
-        app:layout_constraintTop_toTopOf="@id/countryCodePicker" />
+        app:layout_constraintEnd_toEndOf="@+id/textViewMessage"
+        app:layout_constraintStart_toStartOf="@+id/textViewMessage"
+        app:layout_constraintTop_toBottomOf="@+id/textViewMessage" />
 
 <!--    <TextView-->
 <!--        android:id="@+id/tvChangeCountryCode"-->

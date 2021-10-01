@@ -24,7 +24,7 @@ class DeleteAccountFragment: BaseFragment() {
         }
 
         btDelete.setOnClickListener {
-            viewModel.checkEnterPhone("${ccpCountry.selectedCountryCodeWithPlus}${etPhone.text}")
+//            viewModel.checkEnterPhone("${ccpCountry.selectedCountryCodeWithPlus}${etPhone.text}")
             viewModel.deletingUser.observe(this, Observer {
                 when (it) {
                     is UIState.FINISHED<*> -> {
@@ -46,7 +46,7 @@ class DeleteAccountFragment: BaseFragment() {
 
         viewModel.getCountryCode()
         viewModel.countryCode.observe(this, Observer {
-            ccpCountry.setCountryForNameCode(it)
+//            ccpCountry.setCountryForNameCode(it)
         })
     }
 

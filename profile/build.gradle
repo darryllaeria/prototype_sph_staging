@@ -43,7 +43,6 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
     implementation project(":base")
-    implementation project(":ccp")
     implementation library.seekbar
 
     testImplementation test.junit
