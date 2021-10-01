@@ -68,7 +68,6 @@ dependencies {
 
     implementation project(':home')
     implementation project(":base")
-    implementation project(":chat")
 
     testImplementation test.junit
     androidTestImplementation test.test_runner

@@ -6,7 +6,4 @@
     <!-- Authentication module -->
     <include app:graph="@navigation/auth_nav_graph"/>
 
-    <!-- Chat module -->
-    <include app:graph="@navigation/chat_nav_graph"/>
-
 </navigation>
