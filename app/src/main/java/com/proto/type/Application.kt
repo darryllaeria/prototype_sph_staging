@@ -35,17 +35,13 @@ class Application : Application(), LifecycleObserver {
     }
 
     // MARK: - Private Constants
-//    private val firebaseService: FirebaseService by inject()
     private val keyStore: KeyStoreWrapper by inject()
     private val prefMan: PrefsManager by inject()
-//    private val mqttManager: MQTTManager by inject()
 
     // MARK: - Application level lifecycle events
     @OnLifecycleEvent(Lifecycle.Event.ON_START)
     fun onEnteredForeground() {
         AppLog.d(TAG, "Application did enter foreground")
-//        firebaseService.refreshLocalToken()
-//        mqttManager.refreshMQTTs()
     }
 
     @OnLifecycleEvent(Lifecycle.Event.ON_STOP)
@@ -67,8 +63,6 @@ class Application : Application(), LifecycleObserver {
         super.onCreate()
         applyLocale()
         initDependencies()
-//        initEmoji()
-//        initFirebase()
         setupRealm()
         ConfigHelper.applyTheme(PrefsManager.getInstance(this).getBool(Constants.Appearance.SETTINGS_DARK_MODE, false))
         ProcessLifecycleOwner.get().lifecycle.addObserver(this)
@@ -82,21 +76,6 @@ class Application : Application(), LifecycleObserver {
             modules(getModule())
         }
     }
-
-    private fun initEmoji() {
-        val config = BundledEmojiCompatConfig(this)
-            .setReplaceAll(true)
-        EmojiCompat.init(config)
-    }
-
-//    private fun initFirebase() {
-        // Setup Firebase App
-//        firebaseService.setupFirebaseApp(this)
-
-        // Setup Firebase Remote Config
-//        firebaseService.setupFirebaseRemoteConfig()
-//        firebaseService.fetchLatestRemoteConfig()
-//    }
 
     private fun setupRealm() {
         Realm.init(this)
