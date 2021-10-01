@@ -15,7 +15,6 @@ import com.proto.type.base.manager.PrefsManager
 import com.proto.type.base.data.database.RealmDB
 import com.proto.type.base.data.encryption.KeyStoreWrapper
 import com.proto.type.base.utils.AppLog
-import com.proto.type.base.utils.ConfigHelper
 import io.realm.Realm
 import org.koin.android.ext.android.inject
 import org.koin.android.ext.koin.androidContext
@@ -64,7 +63,6 @@ class Application : Application(), LifecycleObserver {
         applyLocale()
         initDependencies()
         setupRealm()
-        ConfigHelper.applyTheme(PrefsManager.getInstance(this).getBool(Constants.Appearance.SETTINGS_DARK_MODE, false))
         ProcessLifecycleOwner.get().lifecycle.addObserver(this)
     }
 

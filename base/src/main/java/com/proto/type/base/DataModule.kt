@@ -2,7 +2,6 @@ package com.proto.type.base
 
 import com.proto.type.base.data.database.localModule
 import com.proto.type.base.data.encryption.KeyStoreWrapper
-import com.proto.type.base.data.firebase.firebaseModule
 import com.proto.type.base.data.remote.remoteModule
 import com.proto.type.base.domain.domainModule
 import com.proto.type.base.manager.managerModule
@@ -17,7 +16,6 @@ val utilModule = module {
 fun getDataModule(): List<Module> {
     return mutableListOf(utilModule).apply {
         add(domainModule)
-        add(firebaseModule)
         add(localModule)
         add(managerModule)
         add(remoteModule)

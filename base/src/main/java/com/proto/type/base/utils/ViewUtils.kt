@@ -6,23 +6,7 @@ import com.proto.type.base.Constants
 import com.proto.type.base.extension.hideView
 import com.proto.type.base.extension.showView
 
-/**
- * @Details utility class for views and their properties
- * @Author Ranosys Technologies
- * @Date 26-Aug-2019
- */
-
 object ViewUtils {
-
-//    fun changeIconDrawableToGray(context: Context, drawable: Drawable?) {
-//        if (drawable != null) {
-//            drawable.mutate()
-//            drawable.setColorFilter(
-//                ContextCompat.getColor(context, R.color.colorAccent),
-//                PorterDuff.Mode.SRC_ATOP
-//            )
-//        }
-//    }
 
     fun disableViewClickTemp(view: View) {
         view.isClickable = false
