@@ -1,7 +1,5 @@
 package com.proto.type.base.repository
 
-import com.proto.type.base.repository.asset_exchange.AssetExchangeRepositoryImpl
-import com.proto.type.base.repository.asset_exchange.IAssetExchangeRepository
 import com.proto.type.base.repository.chat.ChatRepositoryImpl
 import com.proto.type.base.repository.chat.IChatRepository
 import com.proto.type.base.repository.device.DeviceRepositoryImpl
@@ -15,7 +13,6 @@ import com.proto.type.base.repository.user.UserRepositoryImpl
 import org.koin.dsl.module
 
 val repositoryModule = module {
-    single<IAssetExchangeRepository> { AssetExchangeRepositoryImpl(get()) }
     single<IChatRepository> { ChatRepositoryImpl(get(), get()) }
     single<IDeviceRepository> { DeviceRepositoryImpl(get(), get(), get()) }
     single<ILocalRepository> { LocalRepositoryImpl(get()) }
