@@ -23,7 +23,7 @@ class HomeActivity: BaseActivity() {
         super.initView()
         findNavController(R.id.hostContainer).apply {
             addOnDestinationChangedListener { _, destination, _ ->
-                val ids = mutableListOf(R.id.profileTabFragment, R.id.inboxFragment, R.id.contacts)
+                val ids = mutableListOf(R.id.profileTabFragment, R.id.inboxFragment)
                 botNavigator.visibility = if (destination.id in ids) {
                     View.VISIBLE
                 } else {

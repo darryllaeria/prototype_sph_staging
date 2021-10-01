@@ -8,5 +8,5 @@ dependencyResolutionManagement {
         jcenter()
     }
 }
-include ':app', ':home', ':base', ':chat', ':contact', ':profile'
+include ':app', ':home', ':base', ':chat', ':profile'
 rootProject.name='ProtoSPH'

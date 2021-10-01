@@ -12,7 +12,4 @@
     <!-- Chat module -->
     <include app:graph="@navigation/chat_nav_graph"/>
 
-    <!-- Contact module -->
-    <include app:graph="@navigation/contact_nav_graph"/>
-
 </navigation>
