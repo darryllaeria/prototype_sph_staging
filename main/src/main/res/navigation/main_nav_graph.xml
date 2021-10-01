@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/splash">
+
+    <fragment android:id="@+id/splash"
+        android:name="com.proto.type.main.ui.splash.SplashFragment"
+        tools:layout="@layout/fragment_splash">
+
+        <action android:id="@+id/action_splash_to_onboard"
+            app:destination="@id/on_board"/>
+
+    </fragment>
+
+    <!-- Onboard -->
+    <fragment
+        android:id="@+id/on_board"
+        android:name="com.proto.type.main.ui.on_boarding.OnBoardFragment"
+        android:label="OnBoardFragment"
+        tools:layout="@layout/fragment_onboard">
+        <action
+            android:id="@+id/action_onboard_to_signup"
+            app:destination="@id/signup_name" />
+
+        <action android:id="@+id/action_onboard_to_signin"
+            app:destination="@id/login_email"/>
+
+        <deepLink app:uri="chatq://onboard"
+            android:autoVerify="true"/>
+
+    </fragment>
+
+    <!-- Signup name -->
+    <fragment
+        android:id="@+id/signup_name"
+        android:name="com.proto.type.main.ui.signup.name.SignUpNameFragment"
+        android:label="@string/get_started"
+        tools:layout="@layout/fragment_signup_name" >
+        <action
+            android:id="@+id/action_signup_name_to_email"
+            app:destination="@id/signup_email" />
+    </fragment>
+
+    <!-- Sign up email -->
+    <fragment android:id="@+id/signup_email"
+        android:label="@string/email"
+        android:name="com.proto.type.main.ui.signup.email.SignUpEmailFragment"
+        tools:layout="@layout/fragment_signup_email">
+
+        <action android:id="@+id/action_signup_email_to_password"
+            app:destination="@id/signup_password"/>
+
+    </fragment>
+
+    <!-- Sign up password -->
+    <fragment android:id="@+id/signup_password"
+        android:name="com.proto.type.main.ui.signup.password.CreatePasswordFragment"
+        tools:layout="@layout/fragment_create_password">
+
+        <action android:id="@+id/action_password_to_mobile"
+            app:destination="@id/signup_mobile"/>
+
+    </fragment>
+
+    <!-- Signup phone -->
+    <fragment
+        android:id="@+id/signup_mobile"
+        android:name="com.proto.type.main.ui.signup.mobile.SignUpMobileFragment"
+        android:label="SignUpMobileFragment"
+        tools:layout="@layout/fragment_signup_mobile" >
+        <action
+            android:id="@+id/action_signup_mobile_to_chatq_id"
+            app:destination="@id/signup_username" />
+    </fragment>
+
+    <!-- Signup ChatqId -->
+    <fragment
+        android:id="@+id/signup_username"
+        android:name="com.proto.type.main.ui.signup.username.UsernameFragment"
+        tools:layout="@layout/fragment_signup_username">
+
+        <action
+            android:id="@+id/action_signup_username_to_terms"
+            app:destination="@id/term_of_service"/>
+
+    </fragment>
+
+    <!-- Term of service -->
+    <fragment android:id="@+id/term_of_service"
+        android:name="com.proto.type.main.ui.signup.term.TermOfServiceFragment"
+        tools:layout="@layout/fragment_term_of_service">
+
+        <action android:id="@+id/action_term_service_to_verify"
+            app:destination="@id/email_verify"/>
+
+        <action android:id="@+id/action_term_service_to_login"
+            app:destination="@id/login_email"/>
+
+    </fragment>
+
+    <!-- Email verify -->
+    <fragment android:id="@+id/email_verify"
+        android:name="com.proto.type.main.ui.signup.verify.EmailVerifyFragment"
+        tools:layout="@layout/fragment_verify_email" />
+
+    <!-- Login email -->
+    <fragment android:id="@+id/login_email"
+        android:name="com.proto.type.main.ui.login.email.EmailLoginFragment"
+        tools:layout="@layout/fragment_login_email">
+
+        <action android:id="@+id/action_login_email_to_forgot_password"
+            app:destination="@id/forgot_password"/>
+
+        <deepLink app:uri="chatq://login"
+            android:autoVerify="true"/>
+
+    </fragment>
+
+    <!-- Forgot password -->
+    <fragment android:id="@+id/forgot_password"
+        android:name="com.proto.type.main.ui.login.forgot_password.ForgotPasswordFragment"
+        tools:layout="@layout/fragment_forgot_password">
+
+        <action android:id="@+id/action_forgot_password_to_check_mail"
+            app:destination="@id/check_email"/>
+
+    </fragment>
+
+    <!-- Check your email -->
+    <fragment android:id="@+id/check_email"
+        android:name="com.proto.type.main.ui.login.verify.CheckEmailFragment"
+        tools:layout="@layout/fragment_check_email">
+
+        <argument android:name="email"
+            app:argType="string"/>
+
+        <action android:id="@+id/action_email_to_reset_password"
+            app:destination="@id/reset_password"/>
+
+    </fragment>
+
+    <!-- Reset password -->
+    <fragment android:id="@+id/reset_password"
+        android:name="com.proto.type.main.ui.login.reset_password.NewPasswordFragment"
+        tools:layout="@layout/fragment_create_password">
+
+        <argument android:name="code" app:argType="string"/>
+
+        <deepLink android:autoVerify="true"
+            app:uri="chatq://resetpassword?code={code}"/>
+
+    </fragment>
+
+<!--    &lt;!&ndash; Otp verify &ndash;&gt;-->
+<!--    <fragment-->
+<!--        android:id="@+id/otp_verify"-->
+<!--        android:name="com.proto.type.authentication.ui.verify.phone.OTPVerifyFragment"-->
+<!--        android:label="OTPVerifyFragment"-->
+<!--        tools:layout="@layout/fragment_otp_verify" />-->
+</navigation>

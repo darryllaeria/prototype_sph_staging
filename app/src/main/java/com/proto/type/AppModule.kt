@@ -1,6 +1,6 @@
 package com.proto.type
 
-import com.proto.type.home.homeModule
+import com.proto.type.main.homeModule
 import com.proto.type.base.getDataModule
 import org.koin.core.module.Module
 

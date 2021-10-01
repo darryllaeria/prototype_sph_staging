@@ -180,9 +180,6 @@ dependencies {
     // Swiper
     api androidx.swiper
 
-    // Cameraman
-    api library.fotoapp
-
     // Matisse
     api library.matisse
 

@@ -25,7 +25,7 @@ class HomeActivity: BaseActivity() {
 
     override fun initLogic() {
         super.initLogic()
-        findNavController(R.id.hostContainer).navigate(R.id.auth_nav_graph)
+        findNavController(R.id.hostContainer).navigate(R.id.main_nav_graph)
     }
 
     override fun onBackPressed() { }
