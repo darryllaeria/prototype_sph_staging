@@ -1,0 +1,180 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_theme">
+
+    <ImageView
+        android:id="@+id/ivBack"
+        android:layout_width="wrap_content"
+        android:layout_height="?android:actionBarSize"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:src="@drawable/ic_actionbar_back"
+        app:layout_constraintStart_toStartOf="@id/glStart"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/textViewHeading"
+        style="@style/AuthSignupHeader"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/medium_margin"
+        android:text="@string/term_of_service"
+        app:layout_constraintStart_toStartOf="@id/glStart"
+        app:layout_constraintEnd_toEndOf="@id/glEnd"
+        app:layout_constraintTop_toBottomOf="@id/ivBack" />
+
+
+    <ImageView
+        android:id="@+id/ivLogo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_logo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewHeading"
+        android:layout_marginStart="@dimen/medium_margin"
+        android:layout_marginTop="@dimen/large_margin"
+        tools:ignore="ContentDescription"
+        tools:visibility="visible" />
+
+    <CheckBox
+        android:id="@+id/cbTerms"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:layout_marginTop="@dimen/extra_large_margin"
+        app:layout_constraintStart_toStartOf="@id/glStart"
+        app:layout_constraintTop_toBottomOf="@id/ivLogo"
+        android:buttonTint="@color/colorPrimary"/>
+
+    <TextView
+        android:id="@+id/tvTerm"
+        style="@style/AuthSignupTerm"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:gravity="center_vertical"
+        android:layout_marginStart="@dimen/common_margin"
+        app:layout_constraintTop_toTopOf="@id/cbTerms"
+        app:layout_constraintBottom_toBottomOf="@id/cbTerms"
+        app:layout_constraintStart_toEndOf="@id/cbTerms"
+        android:text="@string/i_have_read"/>
+
+    <TextView
+        android:id="@+id/tvTermDesc"
+        style="@style/AuthSignupTerm"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:gravity="center_vertical"
+        android:textColor="@color/blue_link"
+        android:layout_marginStart="@dimen/_4sdp"
+        app:layout_constraintTop_toTopOf="@id/cbTerms"
+        app:layout_constraintBottom_toBottomOf="@id/cbTerms"
+        app:layout_constraintLeft_toRightOf="@+id/tvTerm"
+        android:text="@string/term_of_service"/>
+
+    <ImageView
+        android:id="@+id/ivArrowTerm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_arrow_right"
+        app:layout_constraintTop_toTopOf="@id/cbTerms"
+        app:layout_constraintBottom_toBottomOf="@id/cbTerms"
+        app:layout_constraintEnd_toStartOf="@id/glEnd"/>
+
+    <CheckBox
+        android:id="@+id/cbPrivacy"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:layout_marginTop="@dimen/medium_margin"
+        app:layout_constraintStart_toStartOf="@id/glStart"
+        app:layout_constraintTop_toBottomOf="@id/cbTerms"
+        android:buttonTint="@color/colorPrimary"/>
+
+    <TextView
+        android:id="@+id/tvPrivacy"
+        style="@style/AuthSignupTerm"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:gravity="center_vertical"
+        android:layout_marginStart="@dimen/common_margin"
+        app:layout_constraintTop_toTopOf="@id/cbPrivacy"
+        app:layout_constraintBottom_toBottomOf="@id/cbPrivacy"
+        app:layout_constraintStart_toEndOf="@id/cbPrivacy"
+        android:text="@string/i_have_read"/>
+
+    <TextView
+        android:id="@+id/tvPrivacyDesc"
+        style="@style/AuthSignupTerm"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:textColor="@color/blue_link"
+        android:gravity="center_vertical"
+        android:layout_marginStart="@dimen/_4sdp"
+        app:layout_constraintTop_toTopOf="@id/cbPrivacy"
+        app:layout_constraintBottom_toBottomOf="@id/cbPrivacy"
+        app:layout_constraintStart_toEndOf="@+id/tvPrivacy"
+        android:text="@string/privacy_security"/>
+
+    <ImageView
+        android:id="@+id/ivArrowPrivacy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_arrow_right"
+        app:layout_constraintTop_toTopOf="@id/cbPrivacy"
+        app:layout_constraintBottom_toBottomOf="@id/cbPrivacy"
+        app:layout_constraintEnd_toStartOf="@id/glEnd"/>
+
+    <TextView
+        android:id="@+id/tvDescription"
+        style="@style/AuthSignupSubDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/term_desc"
+        android:layout_marginTop="@dimen/large_margin"
+        app:layout_constraintTop_toBottomOf="@id/cbPrivacy"
+        app:layout_constraintStart_toStartOf="@id/glStart"
+        app:layout_constraintEnd_toStartOf="@id/glEnd"/>
+
+    <TextView
+        android:id="@+id/tvError"
+        style="@style/AuthSignupError"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_marginTop="@dimen/medium_margin"
+        app:layout_constraintStart_toStartOf="@id/glStart"
+        app:layout_constraintEnd_toEndOf="@id/glEnd"
+        app:layout_constraintTop_toBottomOf="@id/tvDescription"/>
+
+    <Button
+        android:id="@+id/btAccept"
+        style="@style/AuthButton"
+        android:layout_width="@dimen/match_constraints"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_margin"
+        android:layout_marginBottom="@dimen/large_margin"
+        android:enabled="false"
+        android:text="@string/accept"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/glEnd"
+        app:layout_constraintStart_toStartOf="@id/glStart" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/screen_padding" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/screen_padding" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

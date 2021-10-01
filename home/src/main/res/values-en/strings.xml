@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="on_board_title_first">Chat for traders, by traders</string>
+    <string name="on_board_sub_title_first">ChatQ was designed for traders and investors looking to connect with their fellow friends.</string>
+    <string name="on_board_title_second">Integrated Market Data</string>
+    <string name="on_board_sub_title_second">Access and share market data directly from your charts, and never miss an opportunity.</string>
+    <string name="on_board_title_third">Empower your trading with Smart Bots</string>
+    <string name="on_board_sub_title_third">Our Smart Bots are here to help you in your trading journey. Start automating in\nOne Click!</string>
+
+    <string name="password">Password</string>
+    <string name="create_your_password">Create your  ChatQ password</string>
+    <string name="re_password">Re-enter Password</string>
+    <string name="txt_err_pwd_invalidate"></string>
+    <string name="confirm">Confirm</string>
+
+    <string name="password_at_least_six">The password is too short (6-character minimum)</string>
+    <string name="password_special_character"></string>
+    <string name="password_upper_lower"></string>
+
+    <string name="reset_password">Reset Password</string>
+    <string name="forgot_password_description">"Please enter the email associated with your account.\nWe’ll send you an email with password reset instructions."</string>
+    <string name="email_address">Email Address</string>
+    <string name="txt_err_unknown_exp"></string>
+    <string name="reset">Reset Password</string>
+
+    <string name="enter_email_password">Enter your email and password</string>
+    <string name="recover_password">Recover Password</string>
+    <string name="login">Login</string>
+    <string name="login_error"></string>
+    <string name="login_email_password"></string>
+    <string name="register">Register</string>
+
+    <string name="what_is_your_email">What is your email address?</string>
+    <string name="email_error">Invalid email address.</string>
+    <string name="what_is_your_phone">What is your phone number?</string>
+    <string name="change_your_country_code">Change your country code</string>
+    <string name="get_started">Let\'s get started</string>
+    <string name="what_is_your_name">What is your name?</string>
+    <string name="chatq_id">ChatQ ID</string>
+    <string name="chatq_id_description">Make it easy for friends to find you. Create a ChatQ ID.</string>
+    <string name="chatq_id_rules_max">"You can use a-z, 0-9 and underscores.\nMin %1$d characters, max %2$d characters."</string>
+    <string name="check_id_availability">Checking this ChatQ ID availability…</string>
+    <string name="term_of_service">Terms of Services</string>
+    <string name="term_desc">By clicking Agree &amp; Continue, you confirm that you agree to the Term and Conditions and Privacy Policy</string>
+    <string name="accept">Accept &amp; Continue</string>
+    <string name="verify_email_desc">Verify your account by clicking on the link we just sent to</string>
+    <string name="continue_without_verify">Continue without verifying</string>
+    <string name="create_password_header">Create your ChatQ password</string>
+    <string name="password_check_at_least_six">At least 6 characters</string>
+    <string name="password_check_special_character">Contain a number or special character</string>
+    <string name="password_check_upper_lower">Upper &amp; lowercase characters</string>
+    <string name="chatq_id_rule">You can use a-z, 0-9 and underscores.\nMin %1$s characters, max %2$s characters.</string>
+
+</resources>

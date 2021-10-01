@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?selectableItemBackground"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/common_margin"
+    android:paddingBottom="@dimen/common_margin">
+
+    <com.proto.type.base.ui.widget.CircularImageView
+        android:id="@+id/civAvatar"
+        android:layout_width="@dimen/_45sdp"
+        android:layout_height="@dimen/_45sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/ic_gradiant_oval" />
+
+
+    <TextView
+        android:id="@+id/textViewName"
+        android:layout_width="@dimen/match_constraints"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/common_margin"
+        android:layout_marginEnd="@dimen/common_margin"
+        android:maxLines="1"
+        android:textColor="@color/black_title"
+        android:textSize="@dimen/text_size_l2"
+        app:layout_constraintBottom_toTopOf="@+id/textViewCount"
+        app:layout_constraintStart_toEndOf="@+id/civAvatar"
+        app:layout_constraintTop_toTopOf="@id/civAvatar"
+        tools:text="Mike Smith" />
+
+    <TextView
+        android:id="@+id/textViewCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/common_margin"
+        android:textColor="@color/black_sub_title"
+        android:textSize="@dimen/text_size_l1"
+        app:layout_constraintBottom_toBottomOf="@+id/civAvatar"
+        app:layout_constraintStart_toEndOf="@+id/civAvatar"
+        app:layout_constraintTop_toBottomOf="@+id/textViewName"
+        tools:text="12 matched messages" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

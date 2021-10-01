@@ -1,0 +1,2 @@
+json_key_file("api-7110775968029408970-636103-164dc09cdd2a.json") # Path to the json secret file - Follow https://docs.fastlane.tools/actions/supply/#setup to get one
+package_name("com.chatq.chatqstaging") # e.g. com.krausefx.app

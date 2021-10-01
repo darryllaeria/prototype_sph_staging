@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingStart="@dimen/screen_padding"
+    android:paddingTop="@dimen/screen_padding"
+    android:paddingEnd="@dimen/screen_padding">
+
+    <TextView
+        android:id="@+id/textViewId"
+        style="@style/TextViewChatSubTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_size_l2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="BTC_USD" />
+
+
+    <TextView
+        android:id="@+id/textViewName"
+        style="@style/TextViewChatTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewId"
+        tools:text="Bitcoin (USD)" />
+
+    <TextView
+        android:id="@+id/textViewPrice"
+        style="@style/TextViewChatTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_bold"
+        android:textColor="@color/green"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewName" />
+
+    <TextView
+        android:id="@+id/textViewCurrentPrice"
+        style="@style/TextViewChatSubTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/common_margin"
+        android:background="@drawable/bg_corner_green"
+        android:fontFamily="@font/roboto_bold"
+        android:padding="@dimen/_3sdp"
+        android:text="+2.35%"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_l1"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textViewPrice"
+        app:layout_constraintStart_toEndOf="@+id/textViewPrice" />
+
+    <TextView
+        android:id="@+id/textViewTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/common_margin"
+        android:text="Today"
+        android:textColor="@color/gray_inbox_date"
+        android:textSize="@dimen/text_size_l1"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textViewPrice"
+        app:layout_constraintStart_toEndOf="@+id/textViewCurrentPrice" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/medium_margin"
+        android:background="@color/gray_divider"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTime" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

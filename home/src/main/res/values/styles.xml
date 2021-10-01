@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AuthSignupForm">
+        <item name="android:background">@null</item>
+        <item name="android:textSize">@dimen/text_size_l4</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textColor">@color/black_title</item>
+        <item name="android:selectable">true</item>
+        <item name="android:maxLength">50</item>
+        <item name="android:paddingEnd">@dimen/zero_dp</item>
+        <item name="android:textColorHint">@color/gray_time_title</item>
+        <item name="android:fontFamily">@font/roboto_medium</item>
+        <item name="android:textCursorDrawable">@color/black</item>
+    </style>
+
+    <style name="AuthSignupHeader">
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textSize">@dimen/text_size_l6</item>
+        <item name="android:fontFamily">@font/roboto_bold</item>
+        <item name="android:textColor">@color/black_heading</item>
+    </style>
+
+    <style name="AuthSignupMessage">
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/text_size_l3</item>
+        <item name="android:textColor">@color/gray_heading</item>
+    </style>
+
+    <style name="AuthOnboardHeader">
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/txt_white</item>
+        <item name="android:textSize">@dimen/text_size_l6</item>
+        <item name="android:fontFamily">@font/roboto_bold</item>
+    </style>
+
+    <style name="AuthOnboardDescription">
+        <item name="android:gravity">center</item>
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:letterSpacing">0.1</item>
+        <item name="android:textSize">@dimen/text_size_l1</item>
+        <item name="android:textColor">@color/txt_white_lighter</item>
+    </style>
+
+    <style name="AuthSignupSubDescription">
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:textSize">@dimen/text_size_l1</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:letterSpacing">0.05</item>
+        <item name="android:textColor">@color/gray_time_title</item>
+    </style>
+
+    <style name="AuthSignupTerm">
+        <item name="android:textColor">@color/black_heading</item>
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:textSize">@dimen/text_size_l1</item>
+        <item name="android:letterSpacing">0.05</item>
+    </style>
+
+    <style name="AuthButton">
+        <item name="android:background">@drawable/bg_app_button</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textSize">@dimen/text_size_l3</item>
+        <item name="android:fontFamily">@font/roboto_bold</item>
+        <item name="android:textColor">@color/txt_white</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingTop">@dimen/_8sdp</item>
+        <item name="android:paddingBottom">@dimen/_8sdp</item>
+    </style>
+
+    <style name="AuthTextButton">
+        <item name="android:textColor">@color/txt_white</item>
+        <item name="android:textSize">@dimen/text_size_l4</item>
+        <item name="android:gravity">center</item>
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:letterSpacing">0.05</item>
+    </style>
+
+    <style name="AuthSignupError">
+        <item name="android:textColor">@color/txt_error</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:letterSpacing">0.1</item>
+        <item name="android:textSize">@dimen/text_size_l1</item>
+        <item name="android:fontFamily">@font/roboto_regular</item>
+    </style>
+
+    <declare-styleable name="MarkedText">
+        <attr name="mt_description" format="string"/>
+    </declare-styleable>
+
+</resources>

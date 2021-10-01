@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <com.proto.type.base.ui.widget.ChatQToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="?android:actionBarSize"
+        android:background="#FFFFFF"
+        app:ctb_button_src="@drawable/ic_qr_code"
+        app:ctb_text_right="@string/done"
+        app:layout_constraintEnd_toStartOf="@+id/glEnd"
+        app:layout_constraintStart_toStartOf="@+id/glStart"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/screen_padding" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="16dp" />
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/bg_theme"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/glEnd"
+        app:layout_constraintStart_toStartOf="@+id/glStart"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textViewHeading"
+                style="@style/TextViewHeading"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:gravity="clip_horizontal"
+                android:text="@string/profile"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.proto.type.base.ui.widget.CircularImageView
+                android:id="@+id/civAvatar"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_100sdp"
+                android:layout_marginTop="@dimen/common_margin"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textViewHeading" />
+
+            <ImageView
+                android:id="@+id/ivEditImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?android:selectableItemBackground"
+                android:contentDescription="@string/profile"
+                android:padding="@dimen/small_clickable_padding"
+                android:src="@drawable/ic_change_avatar"
+                app:layout_constraintBottom_toBottomOf="@id/civAvatar"
+                app:layout_constraintEnd_toEndOf="@id/civAvatar" />
+
+            <com.proto.type.profile.widget.ProfileNameView
+                android:id="@+id/pnvUser"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/common_margin"
+                app:layout_constraintBottom_toBottomOf="@id/civAvatar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/civAvatar"
+                app:layout_constraintTop_toTopOf="@id/civAvatar" />
+
+            <TextView
+                android:id="@+id/tvUserSettings"
+                style="@style/TextProfileHeading"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="26dp"
+                android:text="@string/user_setting"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/civAvatar" />
+
+            <com.proto.type.profile.widget.ItemProfileView
+                android:id="@+id/ipvId"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_margin"
+                app:ipv_icon="@drawable/ic_profile_id"
+                app:ipv_title="@string/chatq_id"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvUserSettings" />
+
+            <com.proto.type.profile.widget.ItemProfileView
+                android:id="@+id/ipvEmail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:ipv_icon="@drawable/ic_profile_email"
+                app:ipv_title="@string/email"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ipvId" />
+
+            <com.proto.type.profile.widget.ItemProfileView
+                android:id="@+id/ipvPhone"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dp"
+                app:ipv_icon="@drawable/ic_profile_phone"
+                app:ipv_title="@string/phone_number"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ipvEmail" />
+
+            <com.proto.type.profile.widget.ItemProfileView
+                android:id="@+id/ipvStatus"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:ipv_icon="@drawable/ic_profile_status"
+                app:ipv_title="@string/status"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ipvPhone" />
+
+            <TextView
+                android:id="@+id/tvChatqSettings"
+                style="@style/TextProfileHeading"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/chatq_settings"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ipvStatus" />
+
+            <com.proto.type.profile.widget.ItemProfileView
+                android:id="@+id/ipvPrivacy"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_margin"
+                app:ipv_icon="@drawable/ic_profile_privacy"
+                app:ipv_show_arrow="true"
+                app:ipv_title="@string/privacy_security"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvChatqSettings" />
+
+            <com.proto.type.profile.widget.ItemProfileView
+                android:id="@+id/ipvNotification"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:ipv_icon="@drawable/ic_profile_sound"
+                app:ipv_show_arrow="true"
+                app:ipv_title="@string/notification_sound"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ipvPrivacy" />
+
+            <com.proto.type.profile.widget.ItemProfileView
+                android:id="@+id/ipvAppearance"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:ipv_icon="@drawable/ic_profile_appearance"
+                app:ipv_show_arrow="true"
+                app:ipv_title="@string/appearance"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ipvNotification" />
+
+            <com.proto.type.profile.widget.ItemProfileView
+                android:id="@+id/ipvLanguage"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:ipv_icon="@drawable/ic_profile_language"
+                app:ipv_show_arrow="true"
+                app:ipv_title="@string/language"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ipvAppearance" />
+
+            <com.proto.type.profile.widget.ItemProfileView
+                android:id="@+id/ipvReport"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:ipv_icon="@drawable/ic_profile_report"
+                app:ipv_show_arrow="true"
+                app:ipv_title="@string/report_problem"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ipvLanguage" />
+
+            <com.proto.type.profile.widget.ItemProfileView
+                android:id="@+id/ipvImprove"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:ipv_icon="@drawable/ic_profile_improve"
+                app:ipv_show_arrow="true"
+                app:ipv_title="@string/what_can_we_improve"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ipvReport" />
+
+            <com.proto.type.profile.widget.ItemProfileView
+                android:id="@+id/ipvAbout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:ipv_icon="@drawable/ic_profile_about"
+                app:ipv_show_arrow="true"
+                app:ipv_show_divider="false"
+                app:ipv_title="@string/about"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ipvImprove" />
+
+            <TextView
+                android:id="@+id/tvAccount"
+                style="@style/TextProfileHeading"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/account_setting"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ipvAbout" />
+
+            <com.proto.type.profile.widget.ItemProfileView
+                android:id="@+id/ipvDelete"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_margin"
+                app:ipv_icon="@drawable/ic_profile_delete"
+                app:ipv_show_arrow="true"
+                app:ipv_show_divider="false"
+                app:ipv_title="@string/delete_account"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvAccount" />
+
+            <TextView
+                android:id="@+id/tvLogout"
+                android:layout_width="@dimen/match_constraints"
+                android:layout_height="@dimen/_26sdp"
+                android:layout_marginTop="@dimen/large_margin"
+                android:layout_marginBottom="24dp"
+                android:background="?android:selectableItemBackground"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="center"
+                android:text="@string/log_out"
+                android:textColor="@color/red"
+                android:textSize="@dimen/text_size_l4"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ipvDelete" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

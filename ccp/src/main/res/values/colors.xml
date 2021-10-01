@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="test">#221224</color>
+    <color name="defaultContentColor">@android:color/black</color>
+
+    <!--primary colors-->
+    <color name="colorPrimary">#267cd2</color>
+    <color name="colorPrimaryDark">#1866cc</color>
+    <color name="colorAccent">#FFFFFF</color>
+
+    <!--support colors-->
+    <color name="white">#FFFFFF</color>
+    <color name="transparent">#00000000</color>
+    <color name="black_title">#222222</color>
+    <color name="black_heading">#333333</color>
+    <color name="black_sub_title">#666666</color>
+    <color name="gray_placeholder">#8e8e8e</color>
+    <color name="gray_date_title">#8a8a8a</color>
+    <color name="gray_section_header">#888888</color>
+    <color name="gray_time_title">#acacac</color>
+    <color name="gray">#bababa</color>
+    <color name="gray_light">#f2f2f2</color>
+    <color name="gray_divider">#ececec</color>
+    <color name="gray_unselected">#cccccc</color>
+    <color name="gray_inbox_date">#acacac</color>
+    <color name="red">#e74c3c</color>
+    <color name="blue_link">#358cff</color>
+    <color name="blue_text">#91c1ff</color>
+    <color name="button_gradient_start">#73b0f4</color>
+    <color name="button_gradient_end">#2e70e0</color>
+</resources>

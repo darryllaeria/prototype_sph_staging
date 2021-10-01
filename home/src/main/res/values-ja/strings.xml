@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="on_board_title_first">ja_Your chat.\nTaken to the next level.</string>
+    <string name="on_board_sub_title_first">ja_Real time market data, smart assistants, all your brokers at one place. Start making the best out of your conversations.</string>
+    <string name="on_board_title_second">ja_The winning strategy\nis in your circle.</string>
+    <string name="on_board_sub_title_second">ja_Get the most out of your circle. Connect with your close ones and start shaping the winning strategy together.</string>
+    <string name="on_board_title_third">Empower your trading\nwith Smart Bots</string>
+    <string name="on_board_sub_title_third">Our Smart Bots are here to help you in your trading journey. Start automating in\nOne Click!</string>
+
+    <string name="password">パスワード</string>
+    <string name="create_your_password">ChatQパスワードを作成します</string>
+    <string name="re_password">パスワード再入力</string>
+    <string name="txt_err_pwd_invalidate"></string>
+    <string name="confirm">確認する</string>
+
+    <string name="password_at_least_six">The password is too short (6-character minimum)</string>
+    <string name="password_special_character"></string>
+    <string name="password_upper_lower"></string>
+
+    <string name="reset_password">Reset Password</string>
+    <string name="forgot_password_description">\"アカウントに関連付けられているメールアドレスを入力してください。</string>
+    <string name="email_address">Eメールアドレス</string>
+    <string name="txt_err_unknown_exp"></string>
+    <string name="reset">パスワードを再設定する</string>
+
+    <string name="enter_email_password">メールアドレスとパスワードを入力してください</string>
+    <string name="recover_password">パスワードを回復</string>
+    <string name="login">ログイン</string>
+    <string name="login_error"></string>
+    <string name="login_email_password"></string>
+    <string name="register">登録</string>
+
+    <string name="what_is_your_email">What is your email address?</string>
+    <string name="email_error">無効な電子メールアドレス。</string>
+    <string name="what_is_your_phone">あなたの電話番号は何番ですか？</string>
+    <string name="change_your_country_code">ja_Change your country code</string>
+    <string name="what_is_your_name">お名前は何ですか？</string>
+    <string name="chatq_id">ChatQ ID</string>
+    <string name="chatq_id_description">友人があなたを見つけやすくします。 ChatQ IDを作成します。</string>
+    <string name="check_id_availability">このChatQ IDの可用性を確認しています…</string>
+    <string name="term_of_service">Terms of Services</string>
+    <string name="term_desc">By clicking Agree &amp; Continue, you confirm that you agree to the Term and Conditions and Privacy Policy</string>
+    <string name="accept">Accept &amp; Continue</string>
+    <string name="verify_email_desc">Verify your account by clicking on the link we just sent to</string>
+    <string name="continue_without_verify">確認せずに続行</string>
+    <string name="get_started">始めましょう</string>
+    <string name="create_password_header">ChatQパスワードの作成</string>
+    <string name="password_check_at_least_six">At least 6 characters</string>
+    <string name="password_check_special_character">Contain a number or special character</string>
+    <string name="password_check_upper_lower">Upper &amp; lowercase characters</string>
+    <string name="chatq_id_rule">ユーザー名はa-z,0-9そしてアンダースコアを使用できます。\nまた、最小でも５文字は必要になります。</string>
+
+</resources>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="@dimen/profile_image_size"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/_8sdp">
+
+    <ImageView
+        android:id="@+id/ivAvatar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/profile_image_size"
+        tools:src="@drawable/ic_avatar_a_e"/>
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        style="@style/TextViewChatTitle"
+        tools:text="Steve"/>
+
+</LinearLayout>

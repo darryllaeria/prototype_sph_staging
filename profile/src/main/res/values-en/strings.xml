@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="edit_name">Edit Name</string>
+    <string name="chatq_settings">ChatQ Settings</string>
+    <string name="appearance">Appearance</string>
+    <string name="about">About ChatQ</string>
+    <string name="account_setting">Account</string>
+    <string name="delete_account">Delete My Account</string>
+    <string name="hint_status">I like unicorns</string>
+    <string name="done">Done</string>
+    <string name="hint_username">You can use a-z, 0-9 and underscores. Minimum length is 5 characters and maximum length is 20 characters.</string>
+    <string name="term_condition">Terms and Conditions</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="chatq_version">ChatQ Version</string>
+    <string name="change_phone_number">Change\nMobile number</string>
+    <string name="change_phone_number_desc">You can change your Phone number here.\nYour account add all your cloud data - messages, media, contacts, etc... will be moved to the new number.</string>
+    <string name="change_number">Change Number</string>
+    <string name="do_not_disturb">Do Not Disturb</string>
+    <string name="show_preview_desc">Show or hide previews when you are not using ChatQ</string>
+    <string name="private_message">Private Messages</string>
+    <string name="show_notification">Show Notifications</string>
+    <string name="sound">Sound</string>
+    <string name="show_preview">Show Previews</string>
+    <string name="group_message">Group Messages</string>
+    <string name="last_seen">Last Seen</string>
+    <string name="my_contact">My Contact</string>
+    <string name="watch_list">Watchlists Preview</string>
+    <string name="nobody">Nobody</string>
+    <string name="chatq_id">ChatQ ID</string>
+    <string name="change_phone_otp_desc">We will send a One-Time-Password (OTP) to your mobile phone number.</string>
+    <string name="label_save">Save</string>
+    <string name="text_size">Text Size</string>
+    <string name="preview">Preview</string>
+    <string name="theme">Theme</string>
+    <string name="dark_mode">Dark Mode</string>
+    <string name="wallpaper_background">Wallpaper Background</string>
+    <string name="suggestion_bar">Suggestion Bar</string>
+    <string name="mute_all_conversations">Mute notifications for all conversations</string>
+    <string name="preview_text_chat">Absolutely!</string>
+    <string name="preview_text_chat_right">I would not be so sure fell as...</string>
+    <string name="resend_otp">Resend OTP</string>
+    <string name="report_app">Report app problem</string>
+    <string name="improve_app">How could we improve application</string>
+    <string name="delete_your_account">Delete Your Account</string>
+    <string name="delete_account_profile">Delete your account info and profile photo</string>
+    <string name="delete_message_history">Delete your message history on this phone</string>
+    <string name="enter_phone_number">Enter phone number</string>
+    <string name="delete_all_group">Delete you from all ChatQ groups</string>
+    <string name="confirm_delete_account">Are you sure want to delete your account?</string>
+    <string name="delete">Delete</string>
+    <string name="block_user_desc">Blocked users will no longer be able to send messages or call you.</string>
+    <string name="block_contact">Block User</string>
+    <string name="mail_title">Share your idea with us</string>
+    <string name="txt_err_update_avatar">There\'s an error while updating avatar</string>
+
+</resources>

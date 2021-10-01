@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?selectableItemBackground"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/common_margin"
+    android:paddingBottom="@dimen/common_margin">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <com.proto.type.base.ui.widget.CircularImageView
+            android:id="@+id/civAvatar"
+            android:layout_width="@dimen/_45sdp"
+            android:layout_height="@dimen/_45sdp"
+            tools:src="@drawable/ic_gradiant_oval" />
+
+        <TextView
+            android:id="@+id/tvChatName"
+            android:layout_width="@dimen/match_constraints"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/common_margin"
+            android:layout_marginEnd="@dimen/common_margin"
+            android:layout_weight="1"
+            android:maxLines="1"
+            android:textColor="@color/black_title"
+            android:textSize="@dimen/text_size_l2"
+            tools:text="Mike Smith" />
+
+        <Button
+            android:id="@+id/btnSendForward"
+            android:background="@drawable/bg_send_button"
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="@dimen/_32sdp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/roboto_regular"
+            android:text="@string/send"
+            android:textSize="@dimen/text_size_l1"/>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.constraintlayout.widget.ConstraintLayout>

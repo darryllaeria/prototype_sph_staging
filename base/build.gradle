@@ -1,0 +1,201 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'realm-android'
+
+android {
+    buildToolsVersion rootProject.ext.buildToolsVersion
+    compileSdkVersion rootProject.ext.compileSdkVersion
+
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles 'consumer-rules.pro'
+    }
+
+    sourceSets {
+        test {
+            java.srcDir 'src/test'
+        }
+        androidTest {
+            java.srcDir 'src/androidTest'
+        }
+    }
+
+    buildTypes {
+        debug {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    realm {
+        kotlinExtensionsEnabled = true
+    }
+
+    flavorDimensions "default"
+
+    productFlavors {
+        localTest {
+            buildConfigField 'String', 'APP_MAIL', '"admin-chatq@chatq.sg"'
+            buildConfigField 'String', 'BASE_URL', '"https://demo-ap13-prod.apigee.net"'
+            buildConfigField 'String', 'CHATQ', '"ChatQ"'
+            buildConfigField 'String', 'MQTT_BASE_URL', '"ssl://staging-s.chatq.sg"'
+            buildConfigField 'String', 'MQTT_MK_BASE_URL', '"ssl://staging-md.chatq.sg"'
+            buildConfigField 'String', 'MQTT_MK_PASSWORD', '"hDeyt5YKIABq/kKQLOTXCV0qhKbau4cY/KKLX4VfzdTgFCUxtmjHRZic5moyRkyJ"'
+            buildConfigField 'String', 'MQTT_MK_USER_NAME', '"XhNHVTe+BIkdIh53Tpud6g=="'
+            buildConfigField 'String', 'MQTT_PASSWORD', '"xIfWBG1timmD6OiNMnV1QfG4kFKBumlr+r59QYJ2ycjgFCUxtmjHRZic5moyRkyJ"'
+            buildConfigField 'String', 'MQTT_PORT', '"443"'
+            buildConfigField 'String', 'MQTT_USER_NAME', '"XhNHVTe+BIkdIh53Tpud6g=="'
+            buildConfigField 'String', 'VERSION_REALM_SCHEMA', '"0"'
+            buildConfigField 'String', 'VERSION_NAME', '"1.0"'
+            dimension "default"
+        }
+
+        dev {
+            buildConfigField 'String', 'APP_MAIL', '"admin-chatq@chatq.sg"'
+            buildConfigField 'String', 'BASE_URL', '"https://api.staging.chatq.sg"'
+            buildConfigField 'String', 'CHATQ', '"ChatQ"'
+
+            // Switched MMR cluster to use the same credentials with DMR cluster for scaling down purpose.
+            // buildConfigField 'String', 'MQTT_BASE_URL', '"ssl://staging-s.chatq.sg"'
+            buildConfigField 'String', 'MQTT_BASE_URL', '"ssl://staging-md.chatq.sg"'
+
+            buildConfigField 'String', 'MQTT_MK_BASE_URL', '"ssl://staging-md.chatq.sg"'
+            buildConfigField 'String', 'MQTT_MK_PASSWORD', '"hDeyt5YKIABq/kKQLOTXCV0qhKbau4cY/KKLX4VfzdTgFCUxtmjHRZic5moyRkyJ"'
+            buildConfigField 'String', 'MQTT_MK_USER_NAME', '"XhNHVTe+BIkdIh53Tpud6g=="'
+
+            // Switched MMR cluster to use the same credentials with DMR cluster for scaling down purpose.
+            // buildConfigField 'String', 'MQTT_PASSWORD', '"xIfWBG1timmD6OiNMnV1QfG4kFKBumlr+r59QYJ2ycjgFCUxtmjHRZic5moyRkyJ"'
+            buildConfigField 'String', 'MQTT_PASSWORD', '"hDeyt5YKIABq/kKQLOTXCV0qhKbau4cY/KKLX4VfzdTgFCUxtmjHRZic5moyRkyJ"'
+
+            buildConfigField 'String', 'MQTT_PORT', '"443"'
+            buildConfigField 'String', 'MQTT_USER_NAME', '"XhNHVTe+BIkdIh53Tpud6g=="'
+            buildConfigField 'String', 'VERSION_REALM_SCHEMA', '"0"'
+            buildConfigField 'String', 'VERSION_NAME', '"1.0"'
+            dimension "default"
+        }
+
+        production {
+            buildConfigField 'String', 'APP_MAIL', '"admin-chat@chatq.sg"'
+            buildConfigField 'String', 'BASE_URL', '"https://api.chatq.sg"'
+            buildConfigField 'String', 'CHATQ', '"ChatQ"'
+            buildConfigField 'String', 'MQTT_BASE_URL', '"ssl://prod-s.chatq.sg"'
+            buildConfigField 'String', 'MQTT_MK_BASE_URL', '"ssl://prod-md.chatq.sg"'
+            buildConfigField 'String', 'MQTT_MK_PASSWORD', '"MVx5+VhOicXKYT9btfzMvDHDR5t6890/id2MQ12IDnbgFCUxtmjHRZic5moyRkyJ"'
+            buildConfigField 'String', 'MQTT_MK_USER_NAME', '"XhNHVTe+BIkdIh53Tpud6g=="'
+            buildConfigField 'String', 'MQTT_PASSWORD', '"9VNnEZ0efDRe+rz8e3rENCkoWOFp/ykUF43m9ZO+MWzgFCUxtmjHRZic5moyRkyJ"'
+            buildConfigField 'String', 'MQTT_PORT', '"443"'
+            buildConfigField 'String', 'MQTT_USER_NAME', '"XhNHVTe+BIkdIh53Tpud6g=="'
+            buildConfigField 'String', 'VERSION_REALM_SCHEMA', '"0"'
+            buildConfigField 'String', 'VERSION_NAME', '"1.0"'
+            dimension "default"
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.bouncycastle:bcpkix-jdk15on:1.56"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    implementation library.lottie
+
+    api androidx.appcompat
+    api androidx.constraint
+    api androidx.core
+
+    implementation androidx.recycler
+    implementation androidx.card_view
+
+    // For Lifecycle, ViewModel and LiveData
+    api androidx.life_ext
+    api androidx.life_runtime
+    api androidx.life_vm
+    api androidx.nav_fragment
+    api androidx.nav_ui
+    api androidx.paging
+    kapt androidx.life_compiler
+
+    api library.photo_editor
+    api library.photo_view
+
+    // Retrofit
+    api library.converter
+    api library.interceptor
+    api library.moshi
+    api library.moshi_adapter
+    api library.moshi_converter
+    api library.moshi_kotlin
+    api library.okhttp
+    api library.retrofit
+    kapt library.moshi_codegen
+
+    // Emoji
+    api androidx.emoji
+    api androidx.emoji_compat
+    api androidx.emoji_bundle
+
+    // Kotlin & Coroutines
+    api library.coroutine_adapter
+    api library.coroutine_android
+    api library.coroutine_core
+    api library.kot_lib
+
+    // Firebase
+    api library.fb_crash
+
+    // Koin
+    api library.koin_core
+    api library.koin_vm
+
+    // Glide
+    api library.glide
+    kapt library.glide_compiler
+
+    // Spanner
+    api library.spanner
+
+    // Alerter
+    api library.alerter
+
+    // Merlin
+    api library.merlin
+
+    // Realm
+    api library.realm
+
+    // Swiper
+    api androidx.swiper
+
+    // Cameraman
+    api library.fotoapp
+
+    // Matisse
+    api library.matisse
+
+    api library.dexter
+
+    api androidx.workmanager
+
+    testImplementation test.junit // Required -- JUnit 4 framework
+    androidTestImplementation test.junit_ext
+    testImplementation test.test_core // Optional -- Robolectric environment
+    androidTestImplementation test.test_core
+    testImplementation test.mockito_core // Optional -- Mockito framework
+    androidTestImplementation test.test_runner
+    androidTestImplementation test.test_rules
+    androidTestImplementation test.espresso_core
+}

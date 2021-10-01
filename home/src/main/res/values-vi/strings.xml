@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="on_board_title_first">ja_Your chat.\nTaken to the next level.</string>
+    <string name="on_board_sub_title_first">ja_Real time market data, smart assistants, all your brokers at one place. Start making the best out of your conversations.</string>
+    <string name="on_board_title_second">ja_The winning strategy\nis in your circle.</string>
+    <string name="on_board_sub_title_second">ja_Get the most out of your circle. Connect with your close ones and start shaping the winning strategy together.</string>
+    <string name="on_board_title_third">Empower your trading\nwith Smart Bots</string>
+    <string name="on_board_sub_title_third">Our Smart Bots are here to help you in your trading journey. Start automating in\nOne Click!</string>
+
+    <string name="password">Mật khẩu</string>
+    <string name="create_your_password">Tạo mật khẩu ChatQ của bạn</string>
+    <string name="re_password">Nhập lại mật khẩu</string>
+    <string name="txt_err_pwd_invalidate"></string>
+    <string name="confirm">Xác nhận</string>
+
+    <string name="password_at_least_six">The password is too short (6-character minimum)</string>
+    <string name="password_special_character"></string>
+    <string name="password_upper_lower"></string>
+
+    <string name="reset_password">Reset Password</string>
+    <string name="forgot_password_description">Please enter the email associated with your account. We’ll send you an email with password reset instructions.</string>
+    <string name="email_address">Địa chỉ email</string>
+    <string name="txt_err_unknown_exp"></string>
+    <string name="reset">Đặt lại mật khẩu</string>
+
+    <string name="enter_email_password">Nhập email và mật khẩu của bạn</string>
+    <string name="recover_password">Khôi phục mật khẩu</string>
+    <string name="login">Đăng nhập</string>
+    <string name="login_error"></string>
+    <string name="login_email_password"></string>
+    <string name="register">Đăng ký</string>
+
+    <string name="what_is_your_email">What is your email address?</string>
+    <string name="email_error">Địa chỉ email không hợp lệ.</string>
+    <string name="what_is_your_phone">Số điện thoại của bạn là gì?</string>
+    <string name="change_your_country_code">Đổi mã nước</string>
+    <string name="what_is_your_name">Tên của bạn là gì?</string>
+    <string name="chatq_id">ChatQ ID</string>
+    <string name="chatq_id_description">Giúp bạn bè dễ dàng tìm thấy bạn. Tạo ChatQ ID.</string>
+    <string name="check_id_availability">Kiểm tra tính khả dụng của ChatQ ID này…</string>
+    <string name="term_of_service">Terms of Services</string>
+    <string name="term_desc">By clicking Agree &amp; Continue, you confirm that you agree to the Term and Conditions and Privacy Policy</string>
+    <string name="accept">Accept &amp; Continue</string>
+    <string name="verify_email_desc">Verify your account by clicking on the link we just sent to</string>
+    <string name="continue_without_verify">Tiếp tục mà không cần xác minh</string>
+    <string name="get_started">Bắt đầu nào</string>
+    <string name="create_password_header">Tạo mật khẩu ChatQ của bạn</string>
+    <string name="password_check_at_least_six">At least 6 characters</string>
+    <string name="password_check_special_character">Contain a number or special character</string>
+    <string name="password_check_upper_lower">Upper &amp; lowercase characters</string>
+    <string name="chatq_id_rule">Bạn có thể dùng a-z, 0-9 và gạch dưới.\nĐộ dài tối thiểu là %1$s ký tự.</string>
+
+</resources>

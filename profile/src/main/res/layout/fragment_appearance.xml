@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/ivBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:src="@drawable/ic_actionbar_back"
+        android:layout_marginTop="@dimen/medium_margin"
+        app:layout_constraintStart_toStartOf="@id/glStart"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/textViewHeading"
+        style="@style/TextViewHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/medium_margin"
+        android:text="@string/appearance"
+        app:layout_constraintStart_toStartOf="@id/glStart"
+        app:layout_constraintTop_toBottomOf="@id/ivBack" />
+
+    <TextView
+        android:id="@+id/tvTextSize"
+        style="@style/TextProfileHeading"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/medium_margin"
+        app:layout_constraintTop_toBottomOf="@id/textViewHeading"
+        app:layout_constraintStart_toEndOf="@id/glStart"
+        app:layout_constraintEnd_toStartOf="@id/glEnd"
+        android:text="@string/text_size"/>
+
+    <TextView
+        android:id="@+id/tvALeft"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:text="A"
+        android:gravity="center_vertical"
+        android:textSize="@dimen/_11ssp"
+        app:layout_constraintStart_toStartOf="@id/glStart"
+        app:layout_constraintTop_toTopOf="@id/tvARight"
+        app:layout_constraintBottom_toBottomOf="@id/tvARight"/>
+
+    <TextView
+        android:id="@+id/tvARight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="A"
+        android:textSize="@dimen/_18ssp"
+        app:layout_constraintEnd_toEndOf="@id/glEnd"
+        app:layout_constraintTop_toBottomOf="@id/tvTextSize"/>
+
+    <com.warkiz.widget.IndicatorSeekBar
+        android:id="@+id/textSizeSeekbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:isb_ticks_count="8"
+        app:isb_min="13"
+        app:isb_max="20"
+        app:isb_progress="13"
+        app:isb_seek_smoothly="true"
+        app:isb_show_tick_marks_type="oval"
+        app:isb_show_indicator="none"
+        app:isb_track_background_color="@color/gray"
+        app:isb_track_progress_color="@color/colorPrimaryDark"
+        app:isb_tick_marks_color="@color/selector_tick_mark"
+        app:isb_thumb_color="@color/colorPrimaryDark"
+        app:layout_constraintTop_toTopOf="@id/tvARight"
+        app:layout_constraintBottom_toBottomOf="@id/tvARight"
+        app:layout_constraintStart_toEndOf="@id/tvALeft"
+        app:layout_constraintEnd_toStartOf="@id/tvARight"/>
+
+    <!-- Preview later -->
+    <TextView
+        android:id="@+id/tvPreview"
+        style="@style/TextProfileHeading"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/medium_margin"
+        app:layout_constraintTop_toBottomOf="@id/textSizeSeekbar"
+        app:layout_constraintStart_toEndOf="@id/glStart"
+        app:layout_constraintEnd_toStartOf="@id/glEnd"
+        android:text="@string/preview"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clPreview"
+        app:layout_constraintTop_toBottomOf="@id/tvPreview"
+        app:layout_constraintLeft_toLeftOf="@id/glStart"
+        app:layout_constraintRight_toRightOf="@id/glEnd"
+        android:layout_marginTop="@dimen/medium_margin"
+        android:paddingTop="@dimen/common_margin"
+        android:paddingBottom="@dimen/common_margin"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_preview_card">
+
+        <com.proto.type.base.ui.widget.CircularImageView
+            android:id="@+id/ivOtherAvatar"
+            android:layout_width="@dimen/_32sdp"
+            android:layout_height="@dimen/_32sdp"
+            android:scaleType="centerInside"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@drawable/ic_logo"/>
+
+        <TextView
+            android:id="@+id/tvChatLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_13ssp"
+            android:padding="@dimen/_8sdp"
+            android:layout_marginStart="@dimen/common_margin"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ivOtherAvatar"
+            android:background="@drawable/bg_preview_chat_left"
+            android:text="@string/preview_text_chat"/>
+
+        <TextView
+            android:id="@+id/tvTimeLeft"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size_l0"
+            android:layout_marginTop="@dimen/_4sdp"
+            app:layout_constraintTop_toBottomOf="@id/tvChatLeft"
+            app:layout_constraintStart_toStartOf="@id/tvChatLeft"
+            android:text="05:06 PM"/>
+
+        <TextView
+            android:id="@+id/tvChatRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/medium_margin"
+            android:textSize="@dimen/_13ssp"
+            android:padding="@dimen/_8sdp"
+            app:layout_constraintTop_toBottomOf="@id/tvTimeLeft"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/bg_preview_chat_right"
+            android:text="@string/preview_text_chat_right"/>
+
+        <TextView
+            android:id="@+id/tvTimeRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvChatRight"
+            android:text="05:07 PM"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Theme -->
+    <TextView
+        android:id="@+id/tvTheme"
+        style="@style/TextProfileHeading"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/medium_margin"
+        app:layout_constraintTop_toBottomOf="@id/clPreview"
+        app:layout_constraintStart_toEndOf="@id/glStart"
+        app:layout_constraintEnd_toStartOf="@id/glEnd"
+        android:text="@string/theme"/>
+
+    <com.proto.type.profile.widget.ItemToggleView
+        android:id="@+id/itvDarkMode"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:itv_key="@string/dark_mode"
+        app:layout_constraintStart_toStartOf="@id/glStart"
+        app:layout_constraintEnd_toEndOf="@id/glEnd"
+        app:layout_constraintTop_toBottomOf="@id/tvTheme"/>
+
+    <com.proto.type.profile.widget.ItemProfileView
+        android:id="@+id/ipvWallpaper"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:ipv_show_divider="false"
+        app:ipv_show_arrow="true"
+        app:ipv_title="@string/wallpaper_background"
+        app:layout_constraintTop_toBottomOf="@id/itvDarkMode"
+        app:layout_constraintStart_toStartOf="@id/glStart"
+        app:layout_constraintEnd_toEndOf="@id/glEnd"/>
+
+    <!-- Message -->
+    <TextView
+        android:id="@+id/tvMessage"
+        style="@style/TextProfileHeading"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/medium_margin"
+        app:layout_constraintTop_toBottomOf="@id/ipvWallpaper"
+        app:layout_constraintStart_toEndOf="@id/glStart"
+        app:layout_constraintEnd_toStartOf="@id/glEnd"
+        android:text="@string/messages"/>
+
+    <com.proto.type.profile.widget.ItemToggleView
+        android:id="@+id/itvSuggestion"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/glStart"
+        app:layout_constraintEnd_toEndOf="@id/glEnd"
+        app:layout_constraintTop_toBottomOf="@id/tvMessage"
+        app:itv_key="@string/suggestion_bar"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/screen_padding" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/screen_padding" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

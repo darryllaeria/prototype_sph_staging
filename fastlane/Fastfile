@@ -1,0 +1,65 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+appfile = CredentialsManager::AppfileConfig
+default_platform(:android)
+
+platform :android do
+    desc "Cleans, runs tests and deploys an .aab file to the Google Play Store on the Internal track"
+    lane :internal_release do
+        gradle(
+            build_type: "Release",
+            flavor: "dev",
+            task: "clean test bundle"
+        )
+        supply(
+            track: "internal",
+            version_code: get_version_code(
+                ext_constant_name: "versionCode",
+                gradle_file_path: "library.gradle"
+            )
+        )
+    end
+
+    desc "Cleans, runs tests and deploys an .aab file to the Google Play Store on the Internal track"
+    lane :production_release do
+        gradle(
+            build_type: "Release",
+            flavor: "dev",
+            task: "clean test bundle"
+        )
+        supply(
+            track: "production",
+            version_code: get_version_code(
+                ext_constant_name: "versionCode",
+                gradle_file_path: "library.gradle"
+            )
+        )
+    end
+
+    desc "Cleans, runs tests and builds an .apk file for DEV"
+    lane :make_dev_apk do
+        gradle(task: "clean test assembleDev")
+        puts "APK Filepath here: " + lane_context[SharedValues::GRADLE_APK_OUTPUT_PATH]
+    end
+
+    desc "Cleans, runs tests and checks the connection to Play Store"
+    lane :test do
+        gradle(task: "clean test")
+        validate_play_store_json_key(
+            json_key: appfile.try_fetch_value(:json_key_file)
+        )
+    end
+end

@@ -1,0 +1,59 @@
+{
+    "items": [
+        {
+            "timezone": {},
+            "holidays": "",
+            "description_value": "Bitfinex is a full-featured spot trading platform for major digital assets & cryptocurrencies, including Bitcoin, Ethereum, EOS, Litecoin, Ripple, NEO, Monero and many more. Bitfinex offers leveraged margin trading through a peer-to-peer funding market, allowing users to securely trade with up to 3.3x leverage. We also boast a suite of order types to help traders take advantage of every situation.",
+            "id": "BITFINEX",
+            "name": "BITFINEX",
+            "website": "https://www.bitfinex.com/",
+            "trading_days_of_week": "",
+            "trading_sessions": ""
+        },
+        {
+            "id": "O",
+            "name": "NASDAQ NSM",
+            "description": "The NASDAQ is an electronic exchange where stocks are traded through an automated network of computers instead of a trading floor. It stands for the National Association of Securities Dealers Automated Quotations System and is the world's second-largest stock exchange based on market capitalization.",
+            "timezone": {
+                "gmtOffset": -5,
+                "hasSummerTime": true,
+                "summerOffset": -4,
+                "summerStart": "08 Mar 2020, 02:00 AM",
+                "summerEnd": "01 Nov 2020, 02:00 AM"
+            },
+            "trading_days_of_week": [
+                {
+                    "startDay": "Monday",
+                    "startTime": 34200,
+                    "endDay": "Monday",
+                    "endTime": 57720
+                },
+                {
+                    "startDay": "Tuesday",
+                    "startTime": 34200,
+                    "endDay": "Tuesday",
+                    "endTime": 57720
+                },
+                {
+                    "startDay": "Wednesday",
+                    "startTime": 34200,
+                    "endDay": "Wednesday",
+                    "endTime": 57720
+                },
+                {
+                    "startDay": "Thursday",
+                    "startTime": 34200,
+                    "endDay": "Thursday",
+                    "endTime": 57720
+                },
+                {
+                    "startDay": "Friday",
+                    "startTime": 34200,
+                    "endDay": "Friday",
+                    "endTime": 57720
+                }
+            ]
+        }
+    ],
+    "version": 2
+}

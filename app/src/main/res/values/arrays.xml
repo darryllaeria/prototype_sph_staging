@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="participants_option_my_self">
+        <item>@string/open_profile</item>
+    </string-array>
+
+    <string-array name="participants_option_user">
+        <item>@string/open_profile</item>
+        <item>@string/send_private_message</item>
+    </string-array>
+
+    <string-array name="participants_option_make_admin">
+        <item>@string/open_profile</item>
+        <item>@string/send_private_message</item>
+        <item>@string/make_group_admin</item>
+        <item>@string/remove_from_group</item>
+    </string-array>
+
+    <string-array name="participants_option_remove_admin">
+        <item>@string/open_profile</item>
+        <item>@string/send_private_message</item>
+        <item>@string/remove_admin</item>
+        <item>@string/remove_from_group</item>
+    </string-array>
+
+
+    <string-array name="report_type">
+        <item>@string/spam_advertising</item>
+        <item>@string/sexual_harassment</item>
+        <item>@string/other_harassment</item>
+        <item>@string/other</item>
+    </string-array>
+
+    <string-array name="group_edit_option">
+        <item>@string/edit_group_name</item>
+        <item>@string/change_group_avatar</item>
+    </string-array>
+
+</resources>

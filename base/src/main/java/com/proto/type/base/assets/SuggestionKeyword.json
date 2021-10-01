@@ -1,0 +1,10 @@
+{
+    "items": [
+        {
+            "id": "CoV",
+            "name": "Coronavirus",
+            "link": "https://thewuhanvirus.com/"
+        }
+    ],
+    "version": 1
+}

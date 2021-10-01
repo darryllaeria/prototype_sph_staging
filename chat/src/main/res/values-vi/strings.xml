@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="add_friend_to_group">Thêm bạn bè vào nhóm</string>
+    <string name="are_you_sure_to_clear_chat">Bạn có chắc chắn muốn xóa %1$s?</string>
+    <string name="new_group_with">Tạo nhóm mới với %1$s</string>
+    <string name="are_you_sure_to_leave_chat">Bạn có chắc chắn muốn rời khỏi %1$s?</string>
+    <string name="unique_admin_warnings">Bạn là quản trị viên duy nhất của nhóm này.\nChúng tôi khuyên bạn nên chọn một quản trị viên trước khi bạn rời đi.</string>
+    <string name="name">Tên</string>
+    <string name="chatq_id">ChatQ ID</string>
+    <string name="block_user">Chặn người dùng</string>
+    <string name="unblock_user">Bỏ chặn người dùng</string>
+    <string name="time">Thời gian</string>
+    <string name="url_domain">Tên miền của URL</string>
+    <string name="url_title">Tiêu đề của URL</string>
+    <string name="loading">Đang tải...</string>
+    <string name="tell_us_why_report">Hãy cho chúng tôi lý do tại sao bạn gửi cho chúng tôi báo cáo này</string>
+    <string name="invite">Mời</string>
+    <string name="chatq_room">Phòng ChatQ</string>
+    <string name="users_is_typing">... is typing</string>
+    <string name="report_message">Báo cáo tin nhắn</string>
+    <string name="chatq_bot">ChatQ Bot</string>
+</resources>

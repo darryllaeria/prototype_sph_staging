@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.proto.type.base.ui.widget.SwipeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipeLayout"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/common_margin"
+    android:orientation="horizontal"
+    app:left_swipe_enabled="true"
+    app:right_swipe_enabled="true"
+    app:sticky_sensitivity="1.0"
+    app:swipe_enabled="true">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?selectableItemBackground"
+        app:cardBackgroundColor="@color/black_heading"
+        app:cardCornerRadius="@dimen/app_dialog_corner_radius"
+        app:cardMaxElevation="@dimen/_10sdp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.proto.type.base.ui.widget.CircularImageView
+                android:id="@+id/imageViewProfilePhoto"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginStart="@dimen/common_margin"
+                android:layout_marginTop="@dimen/common_margin"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:background="@drawable/ic_gradiant_oval" />
+
+            <ImageView
+                android:visibility="invisible"
+                android:id="@+id/imageViewClose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_margin"
+                android:layout_marginEnd="@dimen/common_margin"
+                android:background="?selectableItemBackgroundBorderless"
+                android:padding="@dimen/_4sdp"
+                android:src="@drawable/ic_remove_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewBadge"
+                style="@style/TextViewChatTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="@+id/imageViewProfilePhoto"
+                app:layout_constraintEnd_toEndOf="@+id/imageViewProfilePhoto"
+                app:layout_constraintStart_toStartOf="@+id/imageViewProfilePhoto"
+                app:layout_constraintTop_toTopOf="@+id/imageViewProfilePhoto" />
+
+            <TextView
+                android:id="@+id/textViewTitle"
+                style="@style/TextViewChatSubTitle"
+                android:layout_width="@dimen/match_constraints"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/common_margin"
+                android:layout_marginEnd="@dimen/common_margin"
+                android:text="Kyle Roberts"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_l2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageViewProfilePhoto"
+                app:layout_constraintTop_toTopOf="@+id/imageViewProfilePhoto" />
+
+            <TextView
+                android:id="@+id/textViewMessage"
+                android:layout_width="@dimen/match_constraints"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/common_margin"
+                android:layout_marginEnd="@dimen/common_margin"
+                android:layout_marginBottom="@dimen/common_margin"
+                android:maxLines="2"
+                android:text="I played this tournament last week and happily won 400 Qredits. Sic!"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_l1"
+                app:layout_constraintBottom_toTopOf="@+id/progressBar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageViewProfilePhoto"
+                app:layout_constraintTop_toBottomOf="@+id/textViewTitle" />
+
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="@dimen/match_constraints"
+                android:layout_height="4dp"
+                android:maxHeight="4dp"
+                android:minWidth="4dp"
+                android:padding="0dp"
+                android:progressTint="@color/blue_link"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <!--RIGHT-->
+    <LinearLayout
+        android:id="@+id/right"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        app:clamp="self"
+        app:gravity="right" />
+
+    <!--RIGHT-->
+    <LinearLayout
+        android:id="@+id/left"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        app:clamp="self"
+        app:gravity="left" />
+
+
+</com.proto.type.base.ui.widget.SwipeLayout>

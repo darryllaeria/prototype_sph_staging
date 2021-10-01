@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- START xml_defaults -->
+<defaultsMap>
+    <entry>
+        <key>asset_exchange_version</key>
+        <value>>1.3</value>
+    </entry>
+    <entry>
+        <key>asset_version</key>
+        <value>1.3</value>
+    </entry>
+    <entry>
+        <key>exchange_version</key>
+        <value>1.3</value>
+    </entry>
+    <entry>
+        <key>android_force_update_build_number</key>
+        <value>1</value>
+    </entry>
+    <entry>
+        <key>android_force_update_version</key>
+        <value>1.0</value>
+    </entry>
+    <entry>
+        <key>privacy_version</key>
+        <value>1554850111</value>
+    </entry>
+    <entry>
+        <key>terms_version</key>
+        <value>1566168379</value>
+    </entry>
+</defaultsMap>
+    <!-- END xml_defaults -->

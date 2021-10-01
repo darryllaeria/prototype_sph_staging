@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="add_friend_to_group">Add Friend to Group</string>
+    <string name="are_you_sure_to_clear_chat">Are you sure want to clear %1$s?</string>
+    <string name="new_group_with">New Group with %1$s</string>
+    <string name="are_you_sure_to_leave_chat">Are you sure want to leave %1$s?</string>
+    <string name="unique_admin_warnings">You are the unique admin of this group.\nWe recommend choosing an admin before you leave.</string>
+    <string name="name">Name</string>
+    <string name="chatq_id">ChatQ ID</string>
+    <string name="block_user">Block User</string>
+    <string name="unblock_user">Unblock User</string>
+    <string name="time">Time</string>
+    <string name="url_domain">URL\'s domain</string>
+    <string name="url_title">URL\'s title</string>
+    <string name="loading">Loading...</string>
+    <string name="tell_us_why_report">Tell us why you are sending us this report</string>
+    <string name="invite">Invite</string>
+    <string name="chatq_room">ChatQ Room</string>
+    <string name="users_is_typing">... is typing</string>
+    <string name="report_message">Report Message</string>
+    <string name="chatq_bot">ChatQ Bot</string>
+</resources>

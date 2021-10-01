@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="imageUrl"
+            type="String" />
+
+        <variable
+            name="imageChar"
+            type="String" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black_heading">
+
+        <com.proto.type.base.ui.widget.dialog.image_viewer.ZoomImageView
+            android:id="@+id/zoomImageView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/match_constraints"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+<!--            bind:char="@{imageChar}"-->
+<!--            bind:src="@{imageUrl}" />-->
+
+
+        <ImageView
+            android:id="@+id/ivDialogCross"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/common_margin"
+            android:padding="@dimen/common_margin"
+            android:src="@drawable/ic_editor_close"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="@id/zoomImageView"
+            app:layout_constraintTop_toTopOf="@id/zoomImageView"
+            tools:ignore="ContentDescription"
+            tools:visibility="visible" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

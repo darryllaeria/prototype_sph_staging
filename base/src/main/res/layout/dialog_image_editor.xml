@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/clMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black">
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/groupShow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="includedTopShow,includedBottomShow"
+            tools:visibility="gone" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/groupEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="includedBottomEdit,includedTopEdit,includedOptions"
+            tools:visibility="visible" />
+
+        <include
+            android:id="@+id/includedTopShow"
+            layout="@layout/layout_editor_top_show" />
+
+        <include
+            android:id="@+id/includedTopEdit"
+            layout="@layout/layout_editor_top_edit" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrierTop"
+            android:layout_width="@dimen/match_constraints"
+            android:layout_height="@dimen/match_constraints"
+            android:orientation="horizontal"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="includedTopShow,includedTopEdit" />
+
+        <ja.burhanrashid52.photoeditor.PhotoEditorView
+            android:id="@+id/photoEditorView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0">
+
+        </ja.burhanrashid52.photoeditor.PhotoEditorView>
+
+        <include
+            android:id="@+id/includedOptions"
+            layout="@layout/layout_editor_options" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrierBottom"
+            android:layout_width="@dimen/match_constraints"
+            android:layout_height="@dimen/match_constraints"
+            android:orientation="horizontal"
+            app:barrierDirection="top"
+            app:constraint_referenced_ids="includedBottomShow,includedBottomEdit" />
+
+        <include
+            android:id="@+id/includedBottomShow"
+            layout="@layout/layout_editor_bottom_show"/>
+
+        <include
+            android:id="@+id/includedBottomEdit"
+            layout="@layout/layout_editor_bottom_edit" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>

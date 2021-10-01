@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <Transition
+        app:constraintSetStart="@id/hide"
+        app:constraintSetEnd="@id/show"
+        >
+        <OnSwipe
+            app:dragDirection="dragDown"
+            app:touchAnchorId="@id/clTopBar"
+            app:touchAnchorSide="top"
+            />
+    </Transition>
+    <ConstraintSet android:id="@+id/hide">
+        <Constraint android:id="@+id/clTopBar"
+            android:layout_height="?android:actionBarSize"
+            android:layout_marginTop="0dp"
+            android:layout_width="match_parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+    </ConstraintSet>
+    <ConstraintSet android:id="@+id/show">
+        <Constraint android:id="@+id/clTopBar"
+            android:layout_height="@dimen/_60sdp"
+            android:layout_marginTop="?android:actionBarSize"
+            android:layout_width="match_parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+    </ConstraintSet>
+</MotionScene>

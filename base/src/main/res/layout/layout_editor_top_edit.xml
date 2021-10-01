@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/clEditImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/common_margin"
+            android:layout_marginTop="@dimen/common_margin"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/hide_background"
+            android:padding="@dimen/common_margin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_editor_back" />
+
+        <TextView
+            android:id="@+id/tvText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/common_margin"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:labelFor="@id/etText"
+            android:padding="@dimen/common_margin"
+            android:text="@string/chat_hint"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_l3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/ivBack" />
+
+        <ImageView
+            android:id="@+id/ivArrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/common_margin"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="@dimen/common_margin"
+            app:layout_constraintEnd_toStartOf="@+id/tvText"
+            app:layout_constraintTop_toTopOf="@+id/ivBack"
+            app:srcCompat="@drawable/ic_editor_arrow"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/ivLine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/common_margin"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="@dimen/common_margin"
+            app:layout_constraintEnd_toStartOf="@+id/ivArrow"
+            app:layout_constraintTop_toTopOf="@+id/ivBack"
+            app:srcCompat="@drawable/ic_editor_line"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/ivPen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/common_margin"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="@dimen/common_margin"
+            app:layout_constraintEnd_toStartOf="@+id/ivLine"
+            app:layout_constraintTop_toTopOf="@+id/ivBack"
+            app:srcCompat="@drawable/ic_editor_pen"
+            tools:ignore="ContentDescription" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/groupEnterName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="etText,ivDone"
+            tools:visibility="visible" />
+
+        <EditText
+            android:id="@+id/etText"
+            android:layout_width="@dimen/match_constraints"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/common_margin"
+            android:layout_marginTop="@dimen/common_margin"
+            android:layout_marginEnd="@dimen/common_margin"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:singleLine="true"
+            android:text="@string/chat_hint"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toStartOf="@id/ivDone"
+            app:layout_constraintStart_toStartOf="@+id/ivBack"
+            app:layout_constraintTop_toBottomOf="@id/tvText"
+            tools:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/ivDone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Done"
+            android:padding="@dimen/common_margin"
+            android:src="@drawable/ic_done"
+            app:layout_constraintBottom_toBottomOf="@+id/etText"
+            app:layout_constraintEnd_toEndOf="@+id/tvText"
+            app:layout_constraintStart_toEndOf="@id/etText"
+            app:layout_constraintTop_toTopOf="@id/etText" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>

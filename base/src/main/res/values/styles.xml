@@ -1,0 +1,264 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->v
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="android:windowActivityTransitions">true</item>
+        <item name="android:windowDisablePreview">true</item>
+    </style>
+
+    <!--Splash activity theme-->
+    <style name="SplashTheme" parent="AppTheme">
+        <item name="android:windowBackground">@drawable/bg_splash</item>
+        <item name="android:longClickable">false</item>
+        <item name="android:selectable">false</item>
+        <item name="actionBarStyle">@style/Theme.AppCompat.Light.NoActionBar</item>
+        <item name="android:statusBarColor">@color/txt_white</item>
+        <item name="android:navigationBarColor">@color/transparent</item>
+    </style>
+
+    <!--TextView basic styles-->
+    <style name="TextViewHeading">
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textSize">@dimen/text_size_l7</item>
+        <item name="android:lineHeight">@dimen/_34ssp</item>
+        <item name="android:fontFamily">@font/roboto_bold</item>
+        <item name="android:textColor">@color/black_heading</item>
+    </style>
+
+    <style name="TextViewSubHeading">
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">@dimen/text_size_l4</item>
+        <item name="android:fontFamily">@font/roboto_bold</item>
+        <item name="android:textColor">@color/gray_heading</item>
+        <item name="android:letterSpacing">0.01</item>
+    </style>
+
+    <style name="TextSignUpTerm">
+        <item name="android:textColor">@color/black_heading</item>
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:textSize">@dimen/text_size_l1</item>
+        <item name="android:letterSpacing">0.05</item>
+    </style>
+
+    <style name="TextStyleToolbar">
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:gravity">right|center_vertical</item>
+        <item name="android:textSize">@dimen/text_size_l3</item>
+        <item name="android:letterSpacing">0.15</item>
+        <item name="android:textColor">@color/blue_link</item>
+    </style>
+
+    <style name="TextSignupError">
+        <item name="android:textColor">@color/txt_error</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:letterSpacing">0.1</item>
+        <item name="android:textSize">@dimen/text_size_l1</item>
+        <item name="android:fontFamily">@font/roboto_regular</item>
+    </style>
+
+    <style name="TextOnboardTitle">
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/txt_white</item>
+        <item name="android:textSize">@dimen/text_size_l5</item>
+        <item name="android:fontFamily">@font/roboto_bold</item>
+    </style>
+
+    <style name="TextOnboardSubTitle">
+        <item name="android:gravity">center</item>
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:letterSpacing">0.1</item>
+        <item name="android:textSize">@dimen/text_size_l1</item>
+        <item name="android:textColor">@color/txt_white_lighter</item>
+    </style>
+
+    <style name="TextViewChatTitle">
+        <item name="android:textSize">@dimen/text_size_l3</item>
+        <item name="android:fontFamily">@font/roboto_bold</item>
+        <item name="android:textColor">@color/black_title</item>
+    </style>
+
+    <style name="TextViewChatSubTitle">
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/text_size_l2</item>
+        <item name="android:textColor">@color/gray_heading</item>
+    </style>
+
+    <style name="TextViewDialogMenu">
+        <item name="android:textSize">@dimen/text_size_l2</item>
+        <item name="android:fontFamily">@font/roboto_medium</item>
+        <item name="android:textColor">@color/blue_link</item>
+    </style>
+
+    <style name="TextViewCount">
+        <item name="android:textSize">@dimen/text_size_l1</item>
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:textColor">@color/black_count</item>
+    </style>
+
+    <!--Button basic styles-->
+    <style name="AppButton">
+        <item name="android:background">@drawable/bg_app_button</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textSize">@dimen/text_size_l3</item>
+        <item name="android:fontFamily">@font/roboto_bold</item>
+        <item name="android:textColor">@color/txt_white</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingTop">@dimen/_8sdp</item>
+        <item name="android:paddingBottom">@dimen/_8sdp</item>
+    </style>
+
+    <style name="AppTxtButton">
+        <item name="android:textColor">@color/txt_white</item>
+        <item name="android:textSize">@dimen/text_size_l2</item>
+        <item name="android:gravity">center</item>
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:letterSpacing">0.05</item>
+    </style>
+
+    <!--EdiText basic styles-->
+    <style name="SignUpEditText">
+        <item name="android:background">@null</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textColor">@color/black_title</item>
+        <item name="android:selectable">true</item>
+        <item name="android:maxLength">100</item>
+        <item name="android:textSize">@dimen/text_size_l4</item>
+        <item name="android:paddingEnd">@dimen/zero_dp</item>
+        <item name="android:textColorHint">@color/gray_time_title</item>
+        <item name="android:fontFamily">@font/roboto_medium</item>
+        <item name="android:textCursorDrawable">@color/black</item>
+    </style>
+
+    <style name="TextSignupDescription">
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:textSize">@dimen/text_size_l1</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:letterSpacing">0.05</item>
+        <item name="android:textColor">@color/gray_time_title</item>
+    </style>
+
+    <style name="BottomPickerDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowAnimationStyle">@style/BottomPickerDialogAnim</item>
+    </style>
+
+    <style name="CenterFadeInOutDialog">
+        <item name="android:windowAnimationStyle">@style/FadeInOutDialogAnim</item>
+    </style>
+
+    <style name="BottomPickerDialogAnim">
+        <item name="android:windowEnterAnimation">@anim/slide_up_faster</item>
+        <item name="android:windowExitAnimation">@anim/slide_down_faster</item>
+    </style>
+
+    <style name="FadeInOutDialogAnim">
+        <item name="android:windowEnterAnimation">@android:anim/fade_in</item>
+        <item name="android:windowExitAnimation">@android:anim/fade_out</item>
+    </style>
+
+    <style name="FullScreenDialog" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:statusBarColor">@color/colorPrimary</item>
+        <item name="android:navigationBarColor">@color/colorPrimary</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowAnimationStyle">@style/FadeInOutDialogAnim</item>
+    </style>
+
+    <declare-styleable name="VerticalSlider">
+        <attr name="vs_iconLow" format="reference" />
+        <attr name="vs_iconMedium" format="reference" />
+        <attr name="vs_iconHigh" format="reference" />
+        <attr name="vs_max" format="integer" />
+        <attr name="vs_progress" format="integer" />
+        <attr name="vs_cornerRadius" format="dimension" />
+    </declare-styleable>
+
+    <style name="TabTextAppearance" parent="Widget.MaterialComponents.TabLayout">
+        <item name="android:textSize">@dimen/_13ssp</item>
+        <item name="android:fontFamily">@font/roboto_bold</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="Theme_Dialog" parent="android:Theme.Light">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <!--Select country dialog theme-->
+    <style name="SelectCountryDialogStyle" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="actionBarStyle">@style/Theme.AppCompat</item>
+        <item name="android:windowBackground">@android:color/white</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <!--EdiText basic styles-->
+    <style name="SearchEditText">
+        <item name="android:background">@null</item>
+        <item name="android:ems">15</item>
+        <item name="android:inputType">text</item>
+        <item name="android:textColor">@color/black_title</item>
+        <item name="android:textCursorDrawable">@color/black_title</item>
+        <item name="android:textColorHint">@color/gray_placeholder</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:paddingEnd">8dp</item>
+        <item name="android:fontFamily">@font/roboto_regular</item>
+    </style>
+
+    <!-- BottomSheetDialog -->
+    <style name="SheetDialog" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:colorBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.5</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+
+    <!-- Indexed TextView -->
+    <declare-styleable name="IndexTextView">
+        <attr name="itv_text" format="string"/>
+    </declare-styleable>
+
+    <style name="TextDeleteNote">
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:textSize">@dimen/text_size_l3</item>
+        <item name="android:textColor">@color/light_gray_value</item>
+        <item name="android:letterSpacing">0.05</item>
+    </style>
+
+    <style name="TextEnterPhone">
+        <item name="android:fontFamily">@font/roboto_medium</item>
+        <item name="android:letterSpacing">0.075</item>
+        <item name="android:textColor">@color/black_heading</item>
+        <item name="android:textSize">@dimen/text_size_l4</item>
+    </style>
+
+    <style name="TextToolbar">
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:textSize">@dimen/_17ssp</item>
+        <item name="android:textColor">@color/blue_link</item>
+        <item name="android:letterSpacing">0.05</item>
+    </style>
+
+    <declare-styleable name="ChatQRecyclerView">
+        <attr name="cqrv_empty" format="reference"/>
+        <attr name="cqrv_layoutManager" format="string"/>
+    </declare-styleable>
+
+    <declare-styleable name="AvatarView">
+        <attr name="av_background" format="integer"/>
+        <attr name="av_text" format="string"/>
+    </declare-styleable>
+
+</resources>

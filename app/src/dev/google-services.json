@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1092456713650",
+    "project_id": "proto-type-staging",
+    "storage_bucket": "proto-type-staging.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1092456713650:android:f4054c61b9f31b886368ab",
+        "android_client_info": {
+          "package_name": "com.proto.typestaging"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1092456713650-tbfgf7qv1an8pf3fk3e22h4o0us0s055.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.proto.typestaging",
+            "certificate_hash": "cdb3c71e38122f1fa97738746ef2837a03a1cf51"
+          }
+        },
+        {
+          "client_id": "1092456713650-2m2n93clke8ts41r7v9aq0jdjfet5mbh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCTYH-dI1sswBP3k_BKI6c8GjGVKk5X3FI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1092456713650-2m2n93clke8ts41r7v9aq0jdjfet5mbh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

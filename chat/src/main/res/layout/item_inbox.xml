@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.daimajia.swipe.SwipeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/inboxSwipe"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:clickToClose="true">
+
+    <LinearLayout
+        android:id="@+id/inboxBottomRightLayer"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:paddingEnd="@dimen/common_margin"
+        android:tag="BottomRightLayer"
+        android:weightSum="1">
+
+        <ImageView
+            android:id="@+id/ivRightLeave"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:padding="@dimen/_8sdp"
+            android:src="@drawable/ic_inbox_leave" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/inboxBottomLeftLayer"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:paddingStart="@dimen/common_margin"
+        android:tag="BottomLeftLayer">
+
+        <ImageView
+            android:id="@+id/ivLeftMute"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:padding="@dimen/_8sdp"
+            android:src="@drawable/ic_inbox_mute" />
+
+        <ImageView
+            android:id="@+id/ivLeftPin"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:padding="@dimen/_8sdp"
+            android:src="@drawable/ic_inbox_pin" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/inboxTopLayer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        android:tag="TopLayer">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clMain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:paddingTop="@dimen/common_margin"
+            android:paddingBottom="@dimen/common_margin"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.proto.type.base.ui.widget.CircularImageView
+                android:id="@+id/civAvatar"
+                android:layout_width="@dimen/inbox_image_size"
+                android:layout_height="@dimen/inbox_image_size"
+                android:layout_marginStart="@dimen/screen_padding"
+                android:src="@drawable/ic_group"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvName"
+                style="@style/TextViewChatTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="@font/roboto_medium"
+                android:singleLine="true"
+                android:textColor="#333333"
+                android:textSize="@dimen/_17ssp"
+                app:layout_constraintBottom_toBottomOf="@+id/civAvatar"
+                app:layout_constraintStart_toEndOf="@+id/civAvatar"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.25"
+                tools:text="Title Name" />
+
+            <TextView
+                android:id="@+id/tvSubTitle"
+                style="@style/TextViewChatSubTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:ems="25"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="clip_horizontal"
+                android:singleLine="true"
+                android:textColor="@color/light_gray_value"
+                android:textSize="@dimen/_15ssp"
+                app:layout_constraintEnd_toStartOf="@+id/ivUnreadBot"
+                app:layout_constraintStart_toEndOf="@+id/ivImageIcon"
+                app:layout_constraintTop_toBottomOf="@+id/tvName"
+                tools:text="Sub name" />
+
+            <TextView
+                android:id="@+id/tvDate"
+                style="@style/TextViewCount"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginEnd="@dimen/screen_padding"
+                android:ellipsize="end"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="center|end"
+                android:singleLine="true"
+                android:textColor="@color/light_gray_value"
+                android:textSize="@dimen/_15ssp"
+                app:layout_constraintBottom_toBottomOf="@+id/tvName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tvName"
+                tools:ignore="RtlSymmetry"
+                tools:text="3 hours ago" />
+
+            <ImageView
+                android:id="@+id/ivUnreadBot"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:padding="@dimen/_4sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/tvSubTitle"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintEnd_toStartOf="@+id/ivUnread"
+                app:layout_constraintTop_toBottomOf="@+id/tvName"
+                app:srcCompat="@drawable/ic_unread_bot"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:id="@+id/ivUnread"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginEnd="@dimen/screen_padding"
+                android:padding="@dimen/_4sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/tvSubTitle"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvName"
+                app:srcCompat="@drawable/ic_blue_dot"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:id="@+id/ivImageIcon"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:contentDescription="@string/image"
+                android:padding="@dimen/_4sdp"
+                android:src="@drawable/ic_image"
+                app:layout_constraintBottom_toBottomOf="@+id/tvSubTitle"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintStart_toStartOf="@+id/tvName"
+                app:layout_constraintTop_toTopOf="@+id/tvSubTitle"
+                tools:ignore="RtlSymmetry" />
+
+            <ImageView
+                android:id="@+id/ivPin"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/mute_notification"
+                android:padding="@dimen/_4sdp"
+                android:src="@drawable/ic_pin_chat"
+                app:layout_constraintBottom_toBottomOf="@+id/tvName"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintStart_toEndOf="@+id/tvName"
+                app:layout_constraintTop_toTopOf="@+id/tvName" />
+
+            <ImageView
+                android:id="@+id/ivMute"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/mute_notification"
+                android:padding="@dimen/_4sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/tvName"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintEnd_toStartOf="@+id/tvDate"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/ivPin"
+                app:layout_constraintTop_toTopOf="@+id/tvName"
+                app:srcCompat="@drawable/ic_mute_chat" />
+
+            <ImageView
+                android:id="@+id/ivUserOnline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/civAvatar"
+                app:layout_constraintEnd_toEndOf="@+id/civAvatar"
+                app:layout_constraintHorizontal_bias="0.92"
+                app:layout_constraintStart_toStartOf="@+id/civAvatar"
+                app:layout_constraintTop_toTopOf="@+id/civAvatar"
+                app:layout_constraintVertical_bias="0.92"
+                app:srcCompat="@drawable/ic_online" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+</com.daimajia.swipe.SwipeLayout>

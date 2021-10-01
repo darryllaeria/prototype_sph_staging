@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clEditOption"
+        android:layout_width="@dimen/match_constraints"
+        android:layout_height="@dimen/match_constraints"
+        app:layout_constraintBottom_toTopOf="@id/barrierBottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/barrierTop">
+
+        <com.proto.type.ui.views.seekbar.VerticalSeekBar
+            android:id="@+id/seekBar"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_200sdp"
+            android:layout_marginStart="@dimen/medium_margin"
+            android:max="10"
+            android:progress="5"
+            android:progressDrawable="@mipmap/tringle"
+            android:thumb="@drawable/ic_seek_indicator"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <com.proto.type.base.ui.widget.CircularImageView
+            android:id="@+id/civRed"
+            android:layout_width="@dimen/color_picker_size"
+            android:layout_height="@dimen/color_picker_size"
+            android:src="@drawable/ic_color_picker_red"
+            app:layout_constraintBottom_toBottomOf="@+id/civWhite"
+            app:layout_constraintEnd_toStartOf="@+id/civWhite"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/civWhite" />
+
+        <com.proto.type.base.ui.widget.CircularImageView
+            android:id="@+id/civWhite"
+            android:layout_width="@dimen/color_picker_size"
+            android:layout_height="@dimen/color_picker_size"
+            android:src="@drawable/ic_color_picker_white"
+            app:layout_constraintBottom_toBottomOf="@+id/civBlue"
+            app:layout_constraintEnd_toStartOf="@+id/civBlue"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/civRed"
+            app:layout_constraintTop_toTopOf="@+id/civBlue" />
+
+        <com.proto.type.base.ui.widget.CircularImageView
+            android:id="@+id/civBlue"
+            android:layout_width="@dimen/color_picker_size"
+            android:layout_height="@dimen/color_picker_size"
+            android:src="@drawable/ic_color_picker_blue"
+            app:layout_constraintBottom_toBottomOf="@+id/civGreen"
+            app:layout_constraintEnd_toStartOf="@+id/civGreen"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/civWhite"
+            app:layout_constraintTop_toTopOf="@+id/civGreen" />
+
+        <com.proto.type.base.ui.widget.CircularImageView
+            android:id="@+id/civGreen"
+            android:layout_width="@dimen/color_picker_size"
+            android:layout_height="@dimen/color_picker_size"
+            android:src="@drawable/ic_color_picker_green"
+            app:layout_constraintBottom_toBottomOf="@+id/civOrange"
+            app:layout_constraintEnd_toStartOf="@+id/civOrange"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/civBlue"
+            app:layout_constraintTop_toTopOf="@+id/civOrange" />
+
+        <com.proto.type.base.ui.widget.CircularImageView
+            android:id="@+id/civOrange"
+            android:layout_width="@dimen/color_picker_size"
+            android:layout_height="@dimen/color_picker_size"
+            android:src="@drawable/ic_color_picker_orange"
+            app:layout_constraintBottom_toBottomOf="@+id/civGray"
+            app:layout_constraintEnd_toStartOf="@+id/civGray"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/civGreen"
+            app:layout_constraintTop_toTopOf="@+id/civGray" />
+
+        <com.proto.type.base.ui.widget.CircularImageView
+            android:id="@+id/civGray"
+            android:layout_width="@dimen/color_picker_size"
+            android:layout_height="@dimen/color_picker_size"
+            android:src="@drawable/ic_color_picker_gray"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/civOrange"
+            app:layout_constraintTop_toBottomOf="@+id/seekBar" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

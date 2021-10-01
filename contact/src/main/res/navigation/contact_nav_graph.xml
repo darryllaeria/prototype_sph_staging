@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/contact_nav_graph"
+    app:startDestination="@id/contacts">
+
+    <action android:id="@+id/back_to_contacts"
+        app:destination="@id/contacts"/>
+    <action android:id="@+id/action_scan_qr_code"
+        app:destination="@id/friend_qr_code"/>
+
+    <!-- Contacts screen -->
+    <fragment android:id="@+id/contacts"
+        android:name="com.proto.type.contact.ui.contact.ContactFragment"
+        tools:layout="@layout/fragment_contacts">
+        <action android:id="@+id/action_search_contact"
+            app:destination="@id/search_chatq"/>
+        <deepLink
+            android:autoVerify="true"
+            app:uri="chatq://contacts" />
+    </fragment>
+
+    <!-- Scan qr code -->
+    <fragment android:id="@+id/friend_qr_code"
+        android:name="com.proto.type.contact.ui.scanqrcode.ScanQrCodeFragment"
+        tools:layout="@layout/fragment_scan_qrcode">
+
+        <action android:id="@+id/action_show_my_qr_code"
+            app:destination="@id/my_qr_code"/>
+
+    </fragment>
+
+
+    <!-- User qr code -->
+    <fragment android:id="@+id/my_qr_code"
+        android:name="com.proto.type.contact.ui.yourqrcode.UserQrCodeFragment"
+        tools:layout="@layout/fragment_user_qrcode"/>
+
+    <!-- Search -->
+    <fragment android:id="@+id/search_chatq"
+        android:name="com.proto.type.contact.ui.search.SearchAllFragment"
+        tools:layout="@layout/fragment_search"/>
+
+
+</navigation>

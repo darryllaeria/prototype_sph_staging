@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/chat_nav_graph"
+        android:icon="@drawable/ic_chat_normal"
+        android:title="" />
+
+    <item android:id="@+id/contact_nav_graph"
+        android:icon="@drawable/ic_contact_menu"
+        android:title=""/>
+
+    <item
+        android:id="@+id/bot_nav_graph"
+        android:icon="@drawable/ic_botstore_menu"
+        android:title=""/>
+
+    <item
+        android:id="@+id/profile_nav_graph"
+        android:icon="@drawable/ic_profile_menu"
+        android:title="" />
+</menu>

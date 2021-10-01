@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:width="6dp"
+        android:height="6dp"
+        android:drawable="@drawable/ic_dot_three"
+        android:gravity="center_vertical" />
+
+
+    <item
+        android:width="6dp"
+        android:height="6dp"
+        android:drawable="@drawable/ic_dot_two"
+        android:gravity="center_vertical"
+        android:left="10dp"
+        android:right="16dp" />
+
+
+    <item
+        android:width="12dp"
+        android:height="12dp"
+        android:drawable="@drawable/ic_dot_one"
+        android:gravity="end|center_vertical" />
+
+
+</layer-list>

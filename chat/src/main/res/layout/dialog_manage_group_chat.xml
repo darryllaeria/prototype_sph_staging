@@ -1,0 +1,89 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/clParent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:paddingBottom="@dimen/common_margin">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvMenus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dialog_padding"
+        android:layout_marginEnd="@dimen/dialog_padding"
+        android:layout_marginBottom="@dimen/common_margin"
+        app:cardBackgroundColor="@color/txt_white"
+        app:cardCornerRadius="@dimen/app_dialog_corner_radius"
+        app:cardElevation="@dimen/zero_dp"
+        app:cardPreventCornerOverlap="false"
+        app:layout_constraintBottom_toTopOf="@id/cardCancelPicker">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvEditGroupName"
+                style="@style/TextViewChatSubTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="center"
+                android:padding="@dimen/common_margin"
+                android:tag="1"
+                android:text="@string/edit_group_name"
+                android:textColor="#358cff"
+                android:textSize="20sp" />
+
+            <View
+                android:id="@+id/viewSeparator1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider_height"
+                android:background="@color/gray_divider" />
+
+            <TextView
+                android:id="@+id/tvChangeGroupAvatar"
+                style="@style/TextViewChatSubTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="center"
+                android:padding="@dimen/common_margin"
+                android:tag="2"
+                android:text="@string/change_group_avatar"
+                android:textColor="#358cff"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardCancelPicker"
+        android:layout_width="@dimen/match_constraints"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        app:cardBackgroundColor="@color/txt_white"
+        app:cardCornerRadius="@dimen/app_dialog_corner_radius"
+        app:cardElevation="@dimen/zero_dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/cvMenus"
+        app:layout_constraintStart_toStartOf="@id/cvMenus">
+
+        <TextView
+            android:id="@+id/tvCancel"
+            style="@style/TextViewDialogMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center_horizontal"
+            android:padding="@dimen/common_margin"
+            android:tag="3"
+            android:text="@string/cancel"
+            android:textSize="20sp" />
+
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

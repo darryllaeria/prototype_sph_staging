@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/chat_nav_graph"
+    app:startDestination="@id/inboxFragment">
+
+    <!-- Update later for dynamic env -->
+    <deepLink
+        android:autoVerify="true"
+        app:uri="https://chatq.sg" />
+
+    <fragment
+        android:id="@+id/inboxFragment"
+        android:name="com.proto.type.chat.inbox.InboxFragment"
+        tools:layout="@layout/fragment_inbox">
+
+        <deepLink
+            android:autoVerify="true"
+            app:uri="chatq://inbox" />
+
+        <action
+            android:id="@+id/action_inbox_to_search_message"
+            app:destination="@id/search_message" />
+        <action
+            android:id="@+id/action_inbox_to_new_message"
+            app:destination="@id/new_message" />
+        <action
+            android:id="@+id/action_inbox_to_chat"
+            app:destination="@id/chatFragment" />
+        <argument
+            android:name="roomId"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="roomName"
+            app:argType="string"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_inboxFragment_to_participantsFragment"
+            app:destination="@id/participantsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="com.proto.type.chat.chat.ChatFragment"
+        tools:layout="@layout/fragment_chat">
+        <argument
+            android:name="room_id"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="room_name"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="room_category"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="participant_id"
+            app:argType="string"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_chat_to_chatSettingsFragment"
+            app:destination="@id/chatSettingsFragment" />
+        <deepLink
+            android:autoVerify="true"
+            app:uri="chatq://openChat/{room_id}/{back_nav_destination}" />
+        <action
+            android:id="@+id/action_chat_to_forward_message"
+            app:destination="@id/forward_message" />
+        <action
+            android:id="@+id/action_chat_to_report"
+            app:destination="@id/reportFragment" />
+        <action
+            android:id="@+id/action_chatFragment_to_userProfileFragment"
+            app:destination="@id/userProfileFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/userProfileFragment"
+        android:name="com.proto.type.chat.userprofile.UserProfileFragment"
+        tools:layout="@layout/fragment_user_profile">
+        <action
+            android:id="@+id/action_userProfileFragment_to_reportFragment"
+            app:destination="@id/reportFragment" />
+        <action
+            android:id="@+id/action_userProfileFragment_to_inboxFragment"
+            app:destination="@id/inboxFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/reportFragment"
+        android:name="com.proto.type.chat.report.ReportFragment"
+        tools:layout="@layout/fragment_report" />
+
+    <fragment
+        android:id="@+id/new_message"
+        android:name="com.proto.type.chat.newchat.NewChatFragment"
+        tools:layout="@layout/fragment_new_chat">
+        <action
+            android:id="@+id/action_new_message_to_createGroupFragment"
+            app:destination="@id/createGroupFragment" />
+        <action
+            android:id="@+id/action_new_message_to_addParticipantFragment"
+            app:destination="@id/addParticipantFragment" />
+        <action
+            android:id="@+id/action_new_message_to_chat"
+            app:destination="@id/chatFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/shareMediaFragment"
+        android:name="com.proto.type.chat.sharedmedia.SharedMediaFragment"
+        tools:layout="@layout/fragment_shared_media">
+        <action
+            android:id="@+id/action_shareMediaFragment_to_chatQWebViewFragment"
+            app:destination="@id/chatQWebViewFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/createGroupFragment"
+        android:name="com.proto.type.chat.creategroup.CreateGroupFragment"
+        tools:layout="@layout/fragment_create_group">
+        <action
+            android:id="@+id/action_createGroupFragment_to_chat"
+            app:destination="@id/chatFragment" />
+        <action
+            android:id="@+id/action_createGroupFragment_to_inboxFragment"
+            app:destination="@id/inboxFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/search_message"
+        android:name="com.proto.type.chat.search.SearchChatFragment"
+        tools:layout="@layout/fragment_search_chat">
+        <action
+            android:id="@+id/action_search_message_to_chatFragment"
+            app:destination="@id/chatFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/participantsFragment"
+        android:name="com.proto.type.chat.participants.ParticipantsFragment"
+        tools:layout="@layout/fragment_participants">
+        <action
+            android:id="@+id/action_participantsFragment_to_userProfileFragment"
+            app:destination="@id/userProfileFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/forward_message"
+        android:name="com.proto.type.chat.forward.ForwardChatFragment"
+        tools:layout="@layout/fragment_forward_chat" />
+    <fragment
+        android:id="@+id/addParticipantFragment"
+        android:name="com.proto.type.chat.addparticipant.AddParticipantFragment"
+        tools:layout="@layout/fragment_add_participant">
+        <action
+            android:id="@+id/action_addParticipantFragment_to_createGroupFragment"
+            app:destination="@id/createGroupFragment" />
+        <action
+            android:id="@+id/action_addParticipantFragment_to_chatFragment"
+            app:destination="@id/chatFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/chatSettingsFragment"
+        android:name="com.proto.type.chat.settings.ChatSettingsFragment"
+        android:label="ChatSettingsFragment"
+        tools:layout="@layout/fragment_chat_settings">
+        <action
+            android:id="@+id/action_chatSettingsFragment_to_inbox"
+            app:destination="@id/inboxFragment" />
+        <action
+            android:id="@+id/action_chatSettingsFragment_to_participantsFragment"
+            app:destination="@+id/participantsFragment" />
+        <action
+            android:id="@+id/action_chatSettingsFragment_to_userProfileFragment"
+            app:destination="@id/userProfileFragment" />
+        <action
+            android:id="@+id/action_chatSettingsFragment_to_sharedMediaFragment"
+            app:destination="@id/shareMediaFragment" />
+        <action
+            android:id="@+id/action_chatSettingsFragment_to_addParticipantFragment"
+            app:destination="@id/addParticipantFragment" />
+        <action
+            android:id="@+id/action_chatSettingsFragment_to_createGroupFragment"
+            app:destination="@id/createGroupFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/chatQWebViewFragment"
+        android:name="com.proto.type.base.ui.fragment.WebViewFragment"
+        android:label="ChatQWebViewFragment"
+        tools:layout="@layout/fragment_chatq_webview"></fragment>
+
+</navigation>
